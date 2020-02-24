@@ -16,30 +16,29 @@ def scrap_grad_encs():
     soup=BeautifulSoup(driver.page_source, 'lxml')
     faculty_div = soup.findAll("div", attrs={"class": "wysiwyg parbase section"})[2]
     faculty_link = faculty_div.findAll("a")
+
     for link in faculty_link:
         url = "https://www.concordia.ca" + link['href']
         scrap_courses(url)
     quit_driver(driver)
-
+    
 def scrap_courses(url):
     driver = create_driver()
-
+    driver.get(url)
     #Selenium hands the page source to Beautiful Soup
     soup=BeautifulSoup(driver.page_source, 'lxml')
-    faculty_a = soup.findAll("a")
+    faculty_div = soup.find("div", attrs={"class": "rte"})
+    faculty_a = faculty_div.findAll("a")
     count = 0
-    for s in faculty_a:
+    for links in faculty_a:
         try:
-            href = s['href']
-            
-            if (re.match('/academics/graduate/calendar/current/fasc/',href)):
+            href = links['href']
+            if (re.match('/academics/graduate/calendar/current/',href)):
                 count+=1
                 print(href)
-
         except:
-            pass
-    # quit_driver(driver)
-    print(count)
+             pass
+    quit_driver(driver)
         
 
 scrap_grad_encs()
