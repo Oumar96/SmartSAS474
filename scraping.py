@@ -51,8 +51,7 @@ def scrap_undergrad():
     driver.quit()
     return list_of_faculties, info
 
-def scrap_faculty_courses(faculty_link):
-
+def scrap_faculty_courses(faculty_link,array_undergrad_info):
     driver = create_driver()
     driver.get(faculty_link)
     try:
@@ -72,13 +71,11 @@ def scrap_faculty_courses(faculty_link):
         for courses in courses_array:
             courses_separated = re.split(r"\n\xa0\n", courses)
             for course in courses_separated:
-                print("=========================")
                 if checkIfStartsWithCourseNumb(course):
-                    get_course_number_and_descrption(course)
+                    array_undergrad_info=get_course_number_and_descrption(array_undergrad_info,course)
 
     except AttributeError:
         try:
-            print("error !!!!!!!!!!!!!")
             soup=BeautifulSoup(driver.page_source, 'lxml')
             index_of_hashtag = faculty_link.index("#")+1
             faculty_id = faculty_link[index_of_hashtag:]
@@ -91,12 +88,10 @@ def scrap_faculty_courses(faculty_link):
             for courses in courses_array:
                 courses_separated = re.split(r"\n\xa0\n", courses)
                 for course in courses_separated:
-                    print("=========================")
                     if checkIfStartsWithCourseNumb(course):
-                        get_course_number_and_descrption(course)
+                        array_undergrad_info=get_course_number_and_descrption(array_undergrad_info,course)
         except AttributeError:
             try:
-                print("error 2 !!!!!!!!!!!!!")
                 soup=BeautifulSoup(driver.page_source, 'lxml')
                 index_of_hashtag = faculty_link.index("#")+1
                 faculty_id = faculty_link[index_of_hashtag:]
@@ -107,17 +102,14 @@ def scrap_faculty_courses(faculty_link):
                 courses_array = re.split(r"\n\n", courses_parent_tag)
 
                 for courses in courses_array:
-                    print("=========================")
                     courses_separated = re.split(r"\n\xa0\n", courses)
                     for course in courses_separated:
                         if checkIfStartsWithCourseNumb(course):
-                            get_course_number_and_descrption(course)
+                            array_undergrad_info=get_course_number_and_descrption(array_undergrad_info,course)
             except AttributeError:
-                print("error 2 !!!!!!!!!!!!!")
                 soup=BeautifulSoup(driver.page_source, 'lxml')
                 index_of_hashtag = faculty_link.index("#")+1
                 faculty_id = faculty_link[index_of_hashtag:]
-                # print(faculty_id)
                 courses_section= soup.find('a',{"name": faculty_id})
                 courses_parent_tags = courses_section.parent.findAll('p')
                 course_parent_tag = ''
@@ -128,12 +120,12 @@ def scrap_faculty_courses(faculty_link):
                 for courses in courses_array:
                     courses_separated = re.split(r"\n\xa0\n", courses)
                     for course in courses_separated:
-                        print("=========================")
                         if checkIfStartsWithCourseNumb(course):
-                            get_course_number_and_descrption(course)
-                            # print(course)
+                            array_undergrad_info=get_course_number_and_descrption(array_undergrad_info,course)
     driver.close()
     driver.quit()
+
+    return array_undergrad_info
 
 def checkIfStartsWithCourseNumb(paragraph):
     pattern1 = re.findall("[A-Z]{4}\s[0-9]{3}", paragraph)
@@ -143,7 +135,7 @@ def checkIfStartsWithCourseNumb(paragraph):
     else:
         return False
 
-def get_course_number_and_descrption(paragraph):
+def get_course_number_and_descrption(array_undergrad_info,paragraph):
     array = re.split('\s+', paragraph)
     count = 0
     course_code = ""
@@ -171,27 +163,44 @@ def get_course_number_and_descrption(paragraph):
         credits_index = title.index("credit")-2
         credit = title[credits_index]
         title = title[:credits_index-2]
-        print("Course Code: ",course_code)
-        print("Credits: ", credit)
-        print("Title: ",title)
-        print("Description: ",description)
+        # print("Course Code: ",course_code)
+        # print("Credits: ", credit)
+        # print("Title: ",title)
+        # print("Description: ",description)
+        info = {
+            "course": course_code,
+            "credits": credit,
+            "title": title,
+            "description": description
+        }
+        array_undergrad_info.append(info)
     except ValueError:
-        print("Course Code: ",course_code)
-        print("Credits: ", credit)
-        print("Title: ",title)
-        print("Description: ",description)
+        # print("Course Code: ",course_code)
+        # print("Credits: ", credit)
+        # print("Title: ",title)
+        # print("Description: ",description)
+        info = {
+            "course": course_code,
+            "credits": credit,
+            "title": title,
+            "description": description
+        }
+        array_undergrad_info.append(info)
+    return array_undergrad_info
 
-
+def save_in_json(array):
+    with open('./undergraduate-info.json', 'w') as outfile:
+        json.dump(array, outfile)
 
 if __name__ == "__main__":
-    txt = "SOEN 298      System Hardware Lab (1 credit)\nPrerequisite: Permission of the undergraduate program director. Digital design exercises including assembly and testing corresponding to the SOEN 228 lab. Laboratory: two hours per week."
-    get_course_number_and_descrption(txt)
     list_of_faculties, info = scrap_undergrad()
     # print("faculties: \n")
+    array_undergrad_info = []
     for faculty in info:
         # print(faculty)
         href =info[faculty].get('href')
         link = "https://www.concordia.ca{}".format(href,sep='')
         # print(link)
-        scrap_faculty_courses(link)
-    # scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz")
+        array_undergrad_info = scrap_faculty_courses(link,array_undergrad_info)
+    # array = scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz")
+    save_in_json(array_undergrad_info)
