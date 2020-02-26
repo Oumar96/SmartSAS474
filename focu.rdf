@@ -1,0 +1,152 @@
+BASE <http://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <https://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <https://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX focu: <http://focu.io/schema#>
+
+<Stephen#me>
+a foaf:Person ;
+foaf:givenName "Stephen" ;
+foaf:familyName "Da" ;
+foaf:age "23"^^xsd:int ;
+foaf:mbox "steph.da@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Sandy#me>
+a foaf:Person ;
+foaf:givenName "Sandy" ;
+foaf:familyName "Jones" ;
+foaf:age "23"^^xsd:int ;
+foaf:mbox "S.Jones@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Lina#me>
+a foaf:Person ;
+foaf:givenName "Lina" ;
+foaf:familyName "Matthews" ;
+foaf:age "21"^^xsd:int ;
+foaf:mbox "L.Matthews@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Tina#me>
+a foaf:Person ;
+foaf:givenName "Tina" ;
+foaf:familyName "Turner" ;
+foaf:age "22"^^xsd:int ;
+foaf:mbox "T.Turner@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Charlie#me>
+a foaf:Person ;
+foaf:givenName "Charlie" ;
+foaf:familyName "Schneider" ;
+foaf:age "22"^^xsd:int ;
+foaf:mbox "C.Schneider@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Karter#me>
+a foaf:Person ;
+foaf:givenName "Karter" ;
+foaf:familyName "Roberts" ;
+foaf:age "25"^^xsd:int ;
+foaf:mbox "K.Roberts@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Tyshawn#me>
+a foaf:Person ;
+foaf:givenName "Tyshawn" ;
+foaf:familyName "Norris" ;
+foaf:age "28"^^xsd:int ;
+foaf:mbox "T.Norris@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Armando#me>
+a foaf:Person ;
+foaf:givenName "Armando" ;
+foaf:familyName "Ramsey" ;
+foaf:age "21"^^xsd:int ;
+foaf:mbox "A.Ramsey@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Gina#me>
+a foaf:Person ;
+foaf:givenName "Gina" ;
+foaf:familyName "Ochoa" ;
+foaf:age "20"^^xsd:int ;
+foaf:mbox "G.Ochoa@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+<Sandra#me>
+a foaf:Person ;
+foaf:givenName "Sandra" ;
+foaf:familyName "Rosario" ;
+foaf:age "24"^^xsd:int ;
+foaf:mbox "S.Rosario@example.org" ;
+foaf:schoolHomepage "http://www.concordia.ca/" .
+
+
+focu:Student
+a rdfs:Class;
+rdfs:subClassOf foaf:Person.
+
+focu:Professor
+a rdfs:Class;
+rdfs:subClassOf foaf:Person.  
+
+focu:University
+a rdfs:Class;
+rdfs:subClassOf foaf:Organization.
+
+focu:isEnrolledAt
+a rdf:Property.
+
+focu:isEnrolledAt
+rdfs:domain focu:Student.
+
+focu:isEnrolledAt
+rdfs:range focu:University.
+
+focu:teaches
+a rdf:Property.
+
+focu:teaches
+rdfs:domain focu:Professor.
+
+focu:teaches
+rdfs:range focu:Student.
+
+<Concordia>
+a focu:University;
+foaf:homepage "http://www.concordia.ca/";
+rdfs:seeAlso <http://dbpedia.org/resource/Concordia_University>.
+
+<Stephen#me>
+focu:isEnrolledAt <Concordia>.
+
+<Sandy#me>
+focu:isEnrolledAt <Concordia>.
+
+<Lina#me>
+focu:isEnrolledAt <Concordia>.
+
+<Tina#me>
+focu:isEnrolledAt <Concordia>.
+
+<Charlie#me>
+focu:isEnrolledAt <Concordia>.
+
+<Karter#me>
+focu:isEnrolledAt <Concordia>.
+
+<Tyshawn#me>
+focu:isEnrolledAt <Concordia>.
+
+<Armando#me>
+focu:isEnrolledAt <Concordia>.
+
+<Gina#me>
+focu:isEnrolledAt <Concordia>.
+
+<Sandra#me>
+focu:isEnrolledAt <Concordia>.
