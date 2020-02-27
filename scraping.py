@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import regex
 import json
+from database import Database
 
 
 def scrap_undergrad():
@@ -44,7 +45,7 @@ def scrap_undergrad():
             list_of_faculties.append(faculty_name)
 
 
-    with open('./undergraduate.json', 'w') as outfile:
+    with open('./undergraduate-links.json', 'w') as outfile:
         json.dump(info, outfile)
 
     driver.close()
@@ -79,10 +80,8 @@ def scrap_faculty_courses(faculty_link,array_undergrad_info):
             soup=BeautifulSoup(driver.page_source, 'lxml')
             index_of_hashtag = faculty_link.index("#")+1
             faculty_id = faculty_link[index_of_hashtag:]
-            # print(faculty_id)
             courses_section= soup.find('a',{"id": faculty_id})
             courses_parent_tag = courses_section.parent.parent.text
-            # print(courses_section)
             courses_array = re.split(r"\n\n", courses_parent_tag)
 
             for courses in courses_array:
@@ -163,10 +162,6 @@ def get_course_number_and_descrption(array_undergrad_info,paragraph):
         credits_index = title.index("credit")-2
         credit = title[credits_index]
         title = title[:credits_index-2]
-        # print("Course Code: ",course_code)
-        # print("Credits: ", credit)
-        # print("Title: ",title)
-        # print("Description: ",description)
         info = {
             "course": course_code,
             "credits": credit,
@@ -175,10 +170,6 @@ def get_course_number_and_descrption(array_undergrad_info,paragraph):
         }
         array_undergrad_info.append(info)
     except ValueError:
-        # print("Course Code: ",course_code)
-        # print("Credits: ", credit)
-        # print("Title: ",title)
-        # print("Description: ",description)
         info = {
             "course": course_code,
             "credits": credit,
@@ -192,6 +183,23 @@ def save_in_json(array):
     with open('./undergraduate-info.json', 'w') as outfile:
         json.dump(array, outfile)
 
+def save_in_db(array_of_courses):
+    db = Database("courses.sqlite")
+    db.drop('courses')
+    db.add_table("courses", course="text", credits="text", title="text", description="text", graduate_level="text")
+
+    for course_object in array_of_courses:
+        course = course_object.get('course')
+        credits = course_object.get('credits')
+        title = course_object.get('title')
+        description = course_object.get('description')
+
+        db.insert("courses",course,credits,title,description,"undergraduate")
+
+    db.close_connection()
+
+
+
 if __name__ == "__main__":
     list_of_faculties, info = scrap_undergrad()
     # print("faculties: \n")
@@ -202,5 +210,6 @@ if __name__ == "__main__":
         link = "https://www.concordia.ca{}".format(href,sep='')
         # print(link)
         array_undergrad_info = scrap_faculty_courses(link,array_undergrad_info)
-    # array = scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz")
+    # array_undergrad_info = scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz",array_undergrad_info)
     save_in_json(array_undergrad_info)
+    save_in_db(array_undergrad_info)
