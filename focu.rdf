@@ -6,7 +6,7 @@ PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX focu: <http://focu.io/schema#>
 
 <Stephen#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Stephen" ;
 foaf:familyName "Da" ;
 foaf:age "23"^^xsd:int ;
@@ -14,7 +14,7 @@ foaf:mbox "steph.da@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Sandy#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Sandy" ;
 foaf:familyName "Jones" ;
 foaf:age "23"^^xsd:int ;
@@ -22,7 +22,7 @@ foaf:mbox "S.Jones@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Lina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Lina" ;
 foaf:familyName "Matthews" ;
 foaf:age "21"^^xsd:int ;
@@ -30,7 +30,7 @@ foaf:mbox "L.Matthews@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Tina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Tina" ;
 foaf:familyName "Turner" ;
 foaf:age "22"^^xsd:int ;
@@ -38,7 +38,7 @@ foaf:mbox "T.Turner@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Charlie#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Charlie" ;
 foaf:familyName "Schneider" ;
 foaf:age "22"^^xsd:int ;
@@ -46,7 +46,7 @@ foaf:mbox "C.Schneider@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Karter#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Karter" ;
 foaf:familyName "Roberts" ;
 foaf:age "25"^^xsd:int ;
@@ -54,7 +54,7 @@ foaf:mbox "K.Roberts@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Tyshawn#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Tyshawn" ;
 foaf:familyName "Norris" ;
 foaf:age "28"^^xsd:int ;
@@ -62,7 +62,7 @@ foaf:mbox "T.Norris@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Armando#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Armando" ;
 foaf:familyName "Ramsey" ;
 foaf:age "21"^^xsd:int ;
@@ -70,7 +70,7 @@ foaf:mbox "A.Ramsey@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Gina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Gina" ;
 foaf:familyName "Ochoa" ;
 foaf:age "20"^^xsd:int ;
@@ -78,7 +78,7 @@ foaf:mbox "G.Ochoa@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
 
 <Sandra#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Sandra" ;
 foaf:familyName "Rosario" ;
 foaf:age "24"^^xsd:int ;
