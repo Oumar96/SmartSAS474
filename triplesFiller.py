@@ -1,5 +1,4 @@
 '''Python programs that can transform the dataset into RDF triples. '''
-
 import sqlite3
 import spotlight
 import requests
@@ -9,7 +8,6 @@ from time import sleep
 from itertools import islice
 
 conn = sqlite3.connect('courses.sqlite')
-
 
 Prefixes = {'owl':'<https://www.w3.org/2002/07/owl#>', 'foaf':'<http://xmlns.com/foaf/0.1/>', 'rdfs':'<https://www.w3.org/2000/01/rdf-schema#>', 'rdf':'<https://www.w3.org/1999/02/22-rdf-syntax-ns#>', 'focu':'<http://focu.io/schema#>', 'xsd':'<http://www.w3.org/2001/XMLSchema#>'}
 
@@ -44,7 +42,6 @@ for prop, domran in propsDomRange.items():
                 + '\t rdfs:domain {} ;\n\t rdfs:range {} .\n'.format(domran[0], domran[1]))
 triples +='\n'
 
-
 apiPrefix = "https://api.dbpedia-spotlight.org/en/annotate?text="
 headers = {'accept': 'application/json'}
 cursor = conn.execute("SELECT * from courses")
@@ -52,44 +49,14 @@ cursor = conn.execute("SELECT * from courses")
 for row in cursor:
     course = row[0].split()
     description = row[3]
-
-    ''' response bugs in this section
-    URL = apiPrefix + description
-    try:
-        response = requests.get(url=URL, headers=headers)
-        responseDict = response.json()
-        annotations = []
-        for resources in responseDict['Resources']:
-            annotations.append(resources['@URI'])
-    except KeyError: #requests.exceptions.RequestException:
-        print('skipped3', responseDict)
-        pass'''
-
     triples+=('<{}> a focu:Course ;\n'.format(row[0])
             + '\t focu:courseSubject {} ;\n'.format(course[0])
             + '\t focu:courseNumber {} ;\n'.format(course[1])
             + '\t focu:courseName {} ;\n'.format(row[2])
             +'\t focu:courseDescription {} .\n'.format(row[3]))
 
-    ''' formating for topics
-    try:
-        for a in range(len(annotations)-1):
-            triples +='\t focu:hasTopics {} ;\n'.format(a)
-            triples += '\t focu:hasTopics {} .\n'.format(annotations[len(annotations) - 1])
-    except IndexError:
-        pass'''
+#print nested dictionnary of resources
 
-#print(triples)
-
-
-'''************ working test with last description ************'''
-#URL = apiPrefix + description
-#responseDict = requests.get(url=URL,headers=headers).json()
-
-#print nested dictionnary of resources and storing them into annotations
-
-#cursor2 = conn.execute("SELECT * FROM courses")
-#cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE Description IS NOT NULL")
 cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")
 count=0
 for row in cursor2:
@@ -126,7 +93,6 @@ for row in cursor2:
     if count == 30:
         break
 
-
 #print(triples)
 conn.close()
 
@@ -153,13 +119,6 @@ with open('triples.rdf','w', encoding='utf-8') as file:
         print('skipped3', responseDict)
         pass
 __________________________________________________________'''
-
-''' prints annotations and other data in Resources dict key
-    try:
-        print(responseDict['Resources'])
-    except KeyError:
-        pass
-    '''
 
 '''using spotlight package but request fails
 URL = apiPrefix + description
