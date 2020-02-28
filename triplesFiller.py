@@ -5,6 +5,9 @@ import spotlight
 import requests
 import json
 from collections import defaultdict
+from time import sleep
+from itertools import islice
+
 conn = sqlite3.connect('courses.sqlite')
 
 
@@ -16,7 +19,7 @@ subclasses={'focu:University':'foaf:Organization','focu:Student':'foaf:Person'}
 props=['foaf:name', 'foaf:schoolHomepage','foaf:familyName','foaf:givenName','foaf:mbox','focu:IDNumber', 'focu:courseName', 'focu:courseSubject', 'focu:courseNumber','focus:courseDescription']
 propsDomRange = {'focu:isEnrolledAt': ['focu:Student','focu:University'], 'focu:completedCourseGrade':['focu:Student','focu:Grade'] ,'focu:takesCourse':['focu:Student','focu:Course'],'focu:hasTopics':['focu:courseDescription','focu:courseTopics']}
 
-triples='BASE <http://example.org/>\n'
+triples = 'BASE <http://example.org/>\n'
 
 for key, value in Prefixes.items():
     triples += ("@prefix {}: {} .\n".format(key, value))
@@ -62,11 +65,11 @@ for row in cursor:
         print('skipped3', responseDict)
         pass'''
 
-    triples+=('<{}> a focu:Course;\n'.format(row[0])
+    triples+=('<{}> a focu:Course ;\n'.format(row[0])
             + '\t focu:courseSubject {} ;\n'.format(course[0])
             + '\t focu:courseNumber {} ;\n'.format(course[1])
             + '\t focu:courseName {} ;\n'.format(row[2])
-            +'\t focu:courseDescription {} ;\n'.format(row[3]))
+            +'\t focu:courseDescription {} .\n'.format(row[3]))
 
     ''' formating for topics
     try:
@@ -76,30 +79,59 @@ for row in cursor:
     except IndexError:
         pass'''
 
-print(triples)
-
-conn.close()
-
+#print(triples)
 
 
 '''************ working test with last description ************'''
-URL = apiPrefix + description
-response = requests.get(url=URL,headers=headers)
-responseDict = response.json()
-annotations = []
+#URL = apiPrefix + description
+#responseDict = requests.get(url=URL,headers=headers).json()
 
 #print nested dictionnary of resources and storing them into annotations
-for resources in responseDict['Resources']:
+
+#cursor2 = conn.execute("SELECT * FROM courses")
+#cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE Description IS NOT NULL")
+cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")
+count=0
+for row in cursor2:
+    description = row[1]
+    URL = apiPrefix + description
+    #responseDict = requests.get(url=URL, headers=headers).json()
+    responseDict = requests.get(url=URL, headers=headers)
     try:
-        annotations.append(resources['@URI'])
-    except KeyError:
+        json_data = json.loads(responseDict.text)
+        print(row[0])
+
+        # print(json_data)
+        if 'Resources' in json_data:
+            # print(responseDict.get('Resources')[0]['@URI']) '''returns none if resource doesnt exist
+            if len(json_data.get('Resources')) > 1:
+                triples += ('<{}> focu:hasTopics {} ;\n'.format(row[0],json_data.get('Resources')[0]['@URI']))
+                #print (json_data.get('Resources')) prints the whole Resources list
+                #print('number of urls', len(json_data.get('Resources')))
+                for urls in islice(json_data.get('Resources'), 1, len(json_data.get('Resources'))-1):
+                    try:
+                        #print('list of resources: ', urls.get('@URI'))  # test working properly
+                        triples +='\t focu:hasTopics {} ;\n'.format(urls.get('@URI'))
+                    except:
+                        pass
+                triples += '\t focu:hasTopics {} .\n'.format(json_data.get('Resources')[len(json_data.get('Resources'))-1].get('@URI'))
+                #triples += '\t focu:hasTopics {} .\n'.format(urls.get('@URI'))
+            else:
+                triples += ('<{}> focu:hasTopics {} .\n'.format(row[0], json_data.get('Resources')[0]['@URI']))
+    except:
         pass
-print('annotation test\n',annotations)
-'''*******************************************'''
+
+    #sleep(1)
+    count += 1
+    if count == 30:
+        break
 
 
-'''with open('triples.txt', 'wb') as file:
-    file.write(triples)'''
+#print(triples)
+conn.close()
+
+with open('triples.rdf','w', encoding='utf-8') as file:
+    file.write(triples)
 
 
 ''' ********* failed exception handling ********** 
@@ -128,8 +160,6 @@ __________________________________________________________'''
     except KeyError:
         pass
     '''
-
-
 
 '''using spotlight package but request fails
 URL = apiPrefix + description
