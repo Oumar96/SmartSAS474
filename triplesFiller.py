@@ -60,38 +60,59 @@ for row in cursor:
 cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")
 count=0
 for row in cursor2:
+    print("=============================================")
+    print("Course: ",row[0])
+    print("Description: ", row[1])
     description = row[1]
     URL = apiPrefix + description
-    #responseDict = requests.get(url=URL, headers=headers).json()
+    print("URL: ", URL)
+    response_code=0
+    # #responseDict = requests.get(url=URL, headers=headers).json()
     responseDict = requests.get(url=URL, headers=headers)
-    try:
-        json_data = json.loads(responseDict.text)
-        print(row[0])
+    # # try:
+    print(responseDict)
+    print(responseDict.status_code)
+    number_of_tries = 0
+    while(responseDict.status_code != 200):
+        sleep(2)
+        number_of_tries += 1
+        if(number_of_tries == 3):
+            sleep(120)
+        print("===============Trying number",number_of_tries,"===========")
+        responseDict = requests.get(url=URL, headers=headers)
 
-        # print(json_data)
-        if 'Resources' in json_data:
-            # print(responseDict.get('Resources')[0]['@URI']) '''returns none if resource doesnt exist
-            if len(json_data.get('Resources')) > 1:
-                triples += ('<{}> focu:hasTopics {} ;\n'.format(row[0],json_data.get('Resources')[0]['@URI']))
-                #print (json_data.get('Resources')) prints the whole Resources list
-                #print('number of urls', len(json_data.get('Resources')))
-                for urls in islice(json_data.get('Resources'), 1, len(json_data.get('Resources'))-1):
-                    try:
-                        #print('list of resources: ', urls.get('@URI'))  # test working properly
-                        triples +='\t focu:hasTopics {} ;\n'.format(urls.get('@URI'))
-                    except:
-                        pass
-                triples += '\t focu:hasTopics {} .\n'.format(json_data.get('Resources')[len(json_data.get('Resources'))-1].get('@URI'))
-                #triples += '\t focu:hasTopics {} .\n'.format(urls.get('@URI'))
-            else:
-                triples += ('<{}> focu:hasTopics {} .\n'.format(row[0], json_data.get('Resources')[0]['@URI']))
-    except:
-        pass
+    json_data = responseDict.json()
+    # json_data = json.load(responseDict)
+    print("JSON DATA: ", json_data)
+    print("Count", count)
+    # sleep(2)
+    count=count +1
+    # print(row[0])
 
-    #sleep(1)
-    count += 1
-    if count == 30:
-        break
+    # # print(json_data)
+    if 'Resources' in json_data:
+        # print(responseDict.get('Resources')[0]['@URI']) '''returns none if resource doesnt exist
+        if len(json_data.get('Resources')) > 1:
+            triples += ('<{}> focu:hasTopics {} ;\n'.format(row[0],json_data.get('Resources')[0]['@URI']))
+            #print (json_data.get('Resources')) prints the whole Resources list
+            #print('number of urls', len(json_data.get('Resources')))
+            for urls in islice(json_data.get('Resources'), 1, len(json_data.get('Resources'))-1):
+                try:
+                    #print('list of resources: ', urls.get('@URI'))  # test working properly
+                    triples +='\t focu:hasTopics {} ;\n'.format(urls.get('@URI'))
+                except:
+                    pass
+            triples += '\t focu:hasTopics {} .\n'.format(json_data.get('Resources')[len(json_data.get('Resources'))-1].get('@URI'))
+            #triples += '\t focu:hasTopics {} .\n'.format(urls.get('@URI'))
+        else:
+            triples += ('<{}> focu:hasTopics {} .\n'.format(row[0], json_data.get('Resources')[0]['@URI']))
+    # # except:
+    # #     pass
+
+    # #sleep(1)
+    # count += 1
+    # if count == 30:
+    #     break
 
 #print(triples)
 conn.close()
