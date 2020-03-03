@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     inputText = input("Hello, I am your smart university agent. Who are you looking for?\n")
 
-    g.load("focu.rdf", format='turtle')
+    g.load("triples.rdf", format='turtle')
 
     actif = True
     while(actif):
