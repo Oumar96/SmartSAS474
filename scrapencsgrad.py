@@ -15,12 +15,13 @@ def scrap_course_data():
     course_div = soup.findAll("div", attrs={"class": "wysiwyg parbase section"})[2]
     coursediv_div = course_div.find("div", attrs={"class": "rte"})
     course_para = coursediv_div.findAll("p")
+    # course_span = course_para.findAll("span", attrs={"class": "large-text"})
     for elements in course_para: 
-        bold = elements.find("b")
-        for element in bold:
-            if (checkIfStartsWithCourseNumb(element) == True):
-                para = elements.find("p")
-                print(para)
+        # bold = elements.find("b")
+        # for element in bold:
+        #     if (checkIfStartsWithCourseNumb(element) == True):
+                # para = elements.find("p")
+        print(elements)
 #     course_p = coursediv_div.text
 #     # print(course_p)
     # array_p = re.split(r"\n\n", course_p)
