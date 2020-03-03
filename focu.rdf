@@ -5,6 +5,91 @@ PREFIX rdfs: <https://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX focu: <http://focu.io/schema#>
 
+focu:Course a rdfs:Class .
+
+focu:University a rdfs:Class ;
+	 rdfs:subClassOf foaf:Organization .
+
+focu:Student a rdfs:Class ;
+	 rdfs:subClassOf foaf:Person .
+
+focu:IDNumber
+    a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:courseName
+    a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:courseNumber
+    a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:courseDescription
+    a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:CourseSubject
+    a rdf:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:courseTopics
+    a rdfs:Class ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:Literal .
+
+focu:NumberOfCredits
+    a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:Range rdfs:Literal .
+
+focu:Grade a rdfs:Property ;
+    rdfs:domain focu:Student ;
+    rdfs:range rdfs:literal .
+
+focu:isEnrolledAt a rdf:Property ;
+	 rdfs:domain focu:Student ;
+	 rdfs:range focu:University .
+
+focu:completedCourseGrade a rdf:Property ;
+	 rdfs:domain focu:Student ;
+	 rdfs:range focu:Grade .
+
+focu:takesCourse a rdf:Property ;
+	 rdfs:domain focu:Student ;
+	 rdfs:range focu:Course .
+
+focu:hasTopics a rdf:Property ;
+	 rdfs:domain focu:courseDescription ;
+	 rdfs:range focu:courseTopics .
+
+focu:Student
+    a rdfs:Class;
+    rdfs:subClassOf foaf:Person .
+
+focu:Professor
+    a rdfs:Class;
+    rdfs:subClassOf foaf:Person .
+
+focu:University
+    a rdfs:Class ;
+    rdfs:subClassOf foaf:Organization .
+
+focu:isEnrolledAt
+    a rdf:Property;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:University .
+
+focu:teaches
+    a rdf:Property;
+    rdfs:domain focu:Professor ;
+    rdfs:range focu:Student .
+
 <Stephen#me>
 a focu:Student ;
 foaf:givenName "Stephen" ;
@@ -84,37 +169,6 @@ foaf:familyName "Rosario" ;
 foaf:age "24"^^xsd:int ;
 foaf:mbox "S.Rosario@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" .
-
-
-focu:Student
-a rdfs:Class;
-rdfs:subClassOf foaf:Person.
-
-focu:Professor
-a rdfs:Class;
-rdfs:subClassOf foaf:Person.  
-
-focu:University
-a rdfs:Class;
-rdfs:subClassOf foaf:Organization.
-
-focu:isEnrolledAt
-a rdf:Property.
-
-focu:isEnrolledAt
-rdfs:domain focu:Student.
-
-focu:isEnrolledAt
-rdfs:range focu:University.
-
-focu:teaches
-a rdf:Property.
-
-focu:teaches
-rdfs:domain focu:Professor.
-
-focu:teaches
-rdfs:range focu:Student.
 
 <Concordia>
 a focu:University;
