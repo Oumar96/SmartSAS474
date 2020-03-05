@@ -12,7 +12,7 @@ def scrap_course_data():
     driver.get(href)
 
     info = {}
-
+    array_gradencs_info = []
     #Selenium hands the page source to Beautiful Soup
     soup=BeautifulSoup(driver.page_source, 'lxml')
     course_div = soup.findAll("div", attrs={"class": "wysiwyg parbase section"})[2]
@@ -21,57 +21,35 @@ def scrap_course_data():
     # print(course_para)
     for elements in course_para:
         course_span = elements.findAll("span", attrs={"class": "large-text"})
-        print("span")
-        print(course_span)
+            
+            
+
         for titles in course_span:
+            courseDesceription = titles.text
             course_title = titles.findAll("b")
             if len(course_title) > 0:
-                print("course title")
-                print(course_title)
                 for title in course_title:
-                    print("==========")
                     if (checkIfStartsWithCourseNumb(title.text) == True):
                         array_p2 = re.split(r" ", title.text)
                         course_code = array_p2[0] + " " + array_p2[1][:4]
-                        print(course_code)
                         titleCourseTxt = array_p2[2:]
                         titledesc=''
                         for word in titleCourseTxt:
                             titledesc+= word +' '
-                        print("title desc")
-                        print(titledesc)
 
+                        info = {
+                                "course": course_code,
+                                "credits": "",
+                                "title": titledesc,
+                                "description": courseDesceription
+                            }
+                        array_gradencs_info.append(info)
     quit_driver(driver)
+    return array_gradencs_info
 
-
-                                    # for splittext in array_p1:
-                                    #     # print(splittext)
-                                    #     course_code = splittext[0]
-                                    #     print(course_code)
-                    # txt_title = title.replace('<b>',' ')
-                    # print(txt_title)
-
-        # print("======")
-        # print(elements)
-        # array_p = re.split(r"<p>", elements)
-        # print(array_p)
-        # bold = elements.find("b")
-        # for element in bold:
-        #     if (checkIfStartsWithCourseNumb(element) == True):
-                # para = elements.find("p")
-    #     print(elements)
-    # quit_driver(driver)
-#     course_p = coursediv_div.text
-#     # print(course_p)
-
-    # array_p = re.split(r"\n\n", course_para)
-#     for courses in array_p:
-#         array_p1 = re.split(r"\n\xa0\n", courses)
-#         for element in array_p1:
-#             array_p2 = re.split(r"\n", element)
-#     for elements in course_para:
-#         if (checkIfStartsWithCourseNumb(elements) == True):
-#             print(elements)
+def save_in_json(array):
+    with open('./ENCSgrad-info.json', 'w') as outfile:
+        json.dump(array, outfile)
 
 def checkIfStartsWithCourseNumb(paragraph):
     pattern1 = re.findall("[A-Z]{4}\s[0-9]{3}", paragraph)
@@ -81,4 +59,16 @@ def checkIfStartsWithCourseNumb(paragraph):
     else:
         return False
 
-scrap_course_data()
+if __name__ == "__main__":
+    array_gradencs_info = scrap_course_data()
+    # # print("faculties: \n")
+    # array_undergrad_info = []
+    # for faculty in info:
+    #     # print(faculty)
+    #     href =info[faculty].get('href')
+    #     link = "https://www.concordia.ca{}".format(href,sep='')
+    #     # print(link)
+    #     array_undergrad_info = scrap_faculty_courses(link,array_undergrad_info)
+    # # array_undergrad_info = scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz",array_undergrad_info)
+    save_in_json(array_gradencs_info)
+    # save_in_db(array_undergrad_info)
