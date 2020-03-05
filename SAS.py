@@ -21,7 +21,27 @@ def get_number_of_students():
                 }
         """)
     for row in qres:
-        print("The number of triples in this Knowledge base is: ", row[0])
+        print("The number of students is: ", row[0])
+
+def get_number_of_courses():
+    qres = g.query(
+        """SELECT (COUNT(*) as ?Triples)
+            WHERE {
+                ?subject a focu:Course
+                }
+        """)
+    for row in qres:
+        print("The number of courses is: ", row[0])
+
+def get_number_of_topics():
+    qres = g.query(
+        """SELECT (COUNT(*) as ?Triples)
+            WHERE {
+                ?subject focu:hasTopics ?object
+                }
+        """)
+    for row in qres:
+        print("The number of topics is: ", row[0])
 
 if __name__ == "__main__":
     g = Graph()
@@ -41,6 +61,12 @@ if __name__ == "__main__":
                 inputText = input("Anything else ?\n")
             elif(inputText == "students"):
                 get_number_of_students()
+                inputText = input("Anything else ?\n")
+            elif(inputText == "courses"):
+                get_number_of_courses()
+                inputText = input("Anything else ?\n")
+            elif(inputText == "topics"):
+                get_number_of_topics()
                 inputText = input("Anything else ?\n")
             elif(inputText == "stop"):
                 print("Good bye !\n")
