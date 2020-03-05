@@ -70,7 +70,7 @@ def save_in_db(array_of_courses):
         title = course_object.get('title')
         description = course_object.get('description')
 
-        db.insert("courses",course,credits,title,description,"undergraduate")
+        db.insert("courses",course,credits,title,description,"graduate")
 
     db.close_connection()
 
