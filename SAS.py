@@ -43,10 +43,41 @@ def get_number_of_topics():
     for row in qres:
         print("The number of topics is: ", row[0])
 
+def get_topics_of_course(course):
+    subject = "<http://example.org/"+course+">"
+    query = """SELECT ?link
+                WHERE {{
+                    {} focu:hasTopics ?link.
+                }}""".format(subject)
+
+    qres = g.query(query)
+    
+    print("These are all topics covered:")
+    # Getting all topics
+    for row in qres:
+        link_of_topic = row[0]
+        link = URIRef(row[0])
+        dbpediaGraph = Graph()
+        dbpediaGraph.load(link)
+
+        subject_in_link = "<{}>".format(link)
+        query2 = """SELECT ?label
+            WHERE {{
+                {} rdfs:label ?label.
+                FILTER (LANG(?label) = 'en') . 
+                }}
+        """.format(subject_in_link)
+
+        # Getting the label for every topic
+        qres2 = dbpediaGraph.query(query2)
+        for row in qres2:
+            topic_name = row[0]
+            print(topic_name, ": ",link_of_topic)
+
 if __name__ == "__main__":
     g = Graph()
 
-    inputText = input("Hello, I am your smart university agent. Who are you looking for?\n")
+    inputText = input("Hello, I am your smart university agent. What are you looking for?\n")
 
     g.load("triples.rdf", format='turtle')
 
@@ -55,6 +86,7 @@ if __name__ == "__main__":
         if(inputText == "stop"):
             print("Good bye !\n")
             actif = False
+
         else:
             if(inputText == "triples"):
                 get_total_number_of_triples()
@@ -67,6 +99,10 @@ if __name__ == "__main__":
                 inputText = input("Anything else ?\n")
             elif(inputText == "topics"):
                 get_number_of_topics()
+                inputText = input("Anything else ?\n")
+            elif(inputText == "course topics"):
+                inputText = input("What course do you want the topics for ?\n")
+                get_topics_of_course(inputText)
                 inputText = input("Anything else ?\n")
             elif(inputText == "stop"):
                 print("Good bye !\n")
