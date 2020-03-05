@@ -9,46 +9,55 @@ PREFIX owl: <https://www.w3.org/2002/07/owl#>
 focu:Course a rdfs:Class .
 
 focu:University a rdfs:Class ;
-	 rdfs:subClassOf foaf:Organization .
+	 rdfs:subClassOf foaf:Organization ;
+	 rdfs:label "University"@en .
 
 focu:Student a rdfs:Class ;
-	 rdfs:subClassOf foaf:Person .
+	 rdfs:subClassOf foaf:Person ;
+	 rdfs:label "Student"@en .
 
 focu:IDNumber
     a rdfs:Property ;
     rdfs:domain focu:Course ;
     rdfs:range focu:Literal ;
-    a owl:InverseFunctionalProperty .
+    a owl:InverseFunctionalProperty ;
+	rdfs:label "IDnumber"@en .
 
 focu:courseName
     a rdfs:Property ;
     rdfs:domain focu:Course ;
-    rdfs:range focu:Literal .
+    rdfs:range focu:Literal ;
+	rdfs:label "courseNumber"@en .
 
 focu:courseNumber
     a rdfs:Property ;
     rdfs:domain focu:Course ;
-    rdfs:range focu:Literal .
+    rdfs:range focu:Literal ;
+	rdfs:label "courseNumber"@en .
 
 focu:courseDescription
     a rdfs:Property ;
     rdfs:domain focu:Course ;
-    rdfs:range focu:Literal .
+    rdfs:range focu:Literal ;
+	rdfs:label "courseDescription"@en.
 
 focu:courseSubject
     a rdf:Property ;
     rdfs:domain focu:Course ;
-    rdfs:range focu:Literal .
+    rdfs:range focu:Literal ;
+	rdfs:label "courseSubject"@en .
 
 focu:courseTopics
-    a rdfs:Class ;
+    a rdf:Class ;
     rdfs:domain focu:Course ;
-    rdfs:range focu:Literal .
+    rdfs:range focu:Literal ;
+	rdfs:label "courseTopics"@en .
 
 focu:NumberOfCredits
     a rdfs:Property ;
     rdfs:domain focu:Course ;
-    rdfs:Range rdfs:Literal .
+    rdfs:Range rdfs:Literal ;
+	rdfs:label "NumberOfCredits"@en .
 
 focu:Grade a rdfs:Property ;
     rdfs:domain focu:Student ;
@@ -249,7 +258,7 @@ focu:isEnrolledAt <Concordia>.
 <AHSC225> a focu:Course ;
 	 focu:courseSubject "AHSC" ;
 	 focu:courseNumber "225" ;
-	 focu:courseName "(3 credits" ;
+	 focu:courseName "Self-Managed Learning" ;
 	 focu:courseDescription "This course introduces students to the ways in which theories of learning (including experiential, transformational, integral and action learning) relate to and can inform efforts to bring improvement and change to individuals and groups. The course explores the importance of personal engagement in learning, and illustrates how ongoing reflection strengthens a learning process. It enables students to create clear personal visions, set relevant learning goals, create and organize related activities, and assess their progress. The course provides learning process models and ways to identify personal stylistic differences which affect personal learning progress and strategies." .
 <AHSC230> a focu:Course ;
 	 focu:courseSubject "AHSC" ;
