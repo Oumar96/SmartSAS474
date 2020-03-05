@@ -5,6 +5,7 @@ import regex
 import json
 import requests
 from itertools import cycle
+from database import Database
 
 def scrap_course_data():
     href = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html"
@@ -59,16 +60,22 @@ def checkIfStartsWithCourseNumb(paragraph):
     else:
         return False
 
+def save_in_db(array_of_courses):
+    db = Database("courses.sqlite")
+    # db.insert('courses')
+
+    for course_object in array_of_courses:
+        course = course_object.get('course')
+        credits = course_object.get('credits')
+        title = course_object.get('title')
+        description = course_object.get('description')
+
+        db.insert("courses",course,credits,title,description,"undergraduate")
+
+    db.close_connection()
+
+
 if __name__ == "__main__":
     array_gradencs_info = scrap_course_data()
-    # # print("faculties: \n")
-    # array_undergrad_info = []
-    # for faculty in info:
-    #     # print(faculty)
-    #     href =info[faculty].get('href')
-    #     link = "https://www.concordia.ca{}".format(href,sep='')
-    #     # print(link)
-    #     array_undergrad_info = scrap_faculty_courses(link,array_undergrad_info)
-    # # array_undergrad_info = scrap_faculty_courses("https://www.concordia.ca/academics/undergraduate/calendar/current/sec81/81-100.html#jazz",array_undergrad_info)
     save_in_json(array_gradencs_info)
-    # save_in_db(array_undergrad_info)
+    save_in_db(array_gradencs_info)
