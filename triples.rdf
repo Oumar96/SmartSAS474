@@ -99,7 +99,9 @@ foaf:familyName "Da" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "steph.da@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "69AHSC220" .
+focu:Grades "69 AHSC220" ;
+focu:Grades "65 COEN212" ;
+focu:Grades "66 COEN231" .
 
 <Sandy#me>
 a focu:Student ;
@@ -108,7 +110,9 @@ foaf:familyName "Jones" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "S.Jones@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "99AHSC220".
+focu:Grades "99 AHSC220" ;
+focu:Grades "95 COEN212" ;
+focu:Grades "92 COEN231" .
 
 <Lina#me>
 a focu:Student ;
@@ -117,7 +121,9 @@ foaf:familyName "Matthews" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "L.Matthews@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "67AHSC220" .
+focu:Grades "67 AHSC220" ;
+focu:Grades "68 COEN212" ;
+focu:Grades "69 COEN231" .
 
 <Tina#me>
 a focu:Student ;
@@ -126,7 +132,9 @@ foaf:familyName "Turner" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "T.Turner@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "90AHSC220".
+focu:Grades "90 AHSC220" ;
+focu:Grades "89 COEN212" ;
+focu:Grades "91 COEN231" .
 
 <Charlie#me>
 a focu:Student ;
@@ -135,7 +143,9 @@ foaf:familyName "Schneider" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "C.Schneider@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "78AHSC220" .
+focu:Grades "78 AHSC220" ;
+focu:Grades "85 COEN212" ;
+focu:Grades "79 COEN231" .
 
 <Karter#me>
 a focu:Student ;
@@ -144,7 +154,9 @@ foaf:familyName "Roberts" ;
 foaf:age "25"^^xsd:int ;
 foaf:mbox "K.Roberts@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "81AHSC220" .
+focu:Grades "81 AHSC220" ;
+focu:Grades "78 COEN212" ;
+focu:Grades "85 COEN231" .
 
 <Tyshawn#me>
 a focu:Student ;
@@ -153,7 +165,9 @@ foaf:familyName "Norris" ;
 foaf:age "28"^^xsd:int ;
 foaf:mbox "T.Norris@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "78AHSC220" .
+focu:Grades "78 AHSC220" ;
+focu:Grades "81 COEN212" ;
+focu:Grades "72 COEN231" .
 
 <Armando#me>
 a focu:Student ;
@@ -162,7 +176,9 @@ foaf:familyName "Ramsey" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "A.Ramsey@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "72AHSC220" .
+focu:Grades "72 AHSC220" ;
+focu:Grades "75 COEN212" ;
+focu:Grades "78 COEN231" .
 
 <Gina#me>
 a focu:Student ;
@@ -171,7 +187,9 @@ foaf:familyName "Ochoa" ;
 foaf:age "20"^^xsd:int ;
 foaf:mbox "G.Ochoa@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "87AHSC220" .
+focu:Grades "87 AHSC220" ;
+focu:Grades "85 COEN212" ;
+focu:Grades "89 COEN231" .
 
 <Sandra#me>
 a focu:Student ;
@@ -180,7 +198,9 @@ foaf:familyName "Rosario" ;
 foaf:age "24"^^xsd:int ;
 foaf:mbox "S.Rosario@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:Grades "65AHSC220" .
+focu:Grades "65 AHSC220" ;
+focu:Grades "65 COEN212" ;
+focu:Grades "66 COEN231" .
 
 <Concordia>
 a focu:University;
