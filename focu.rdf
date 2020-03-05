@@ -41,7 +41,7 @@ focu:courseSubject
     rdfs:range focu:Literal .
 
 focu:courseTopics
-    a rdfs:Class ;
+    a rdfs:Property ;
     rdfs:domain focu:Course ;
     rdfs:range focu:Literal .
 
