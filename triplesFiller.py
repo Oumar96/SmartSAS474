@@ -19,14 +19,15 @@ headers = {'accept': 'application/json'}
 cursor = conn.execute("SELECT * from courses")
 
 for row in cursor:
-    course = row[0].split()
-    description = row[3]
-    triples+=('<{}> a focu:Course ;\n'.format(row[0].replace(' ',''))
+    course = row[0].replace(' ','').replace(',','').replace('*','')
+    triples+=('<{}> a focu:Course ;\n'.format(course)
             + '\t focu:courseSubject "{}" ;\n'.format(course[0])
             + '\t focu:courseNumber "{}" ;\n'.format(course[1])
             + '\t focu:courseName "{}" ;\n'.format(row[2])
-            +'\t focu:courseDescription "{}" .\n'.format(row[3]))
-
+            +'\t focu:courseDescription "{}" ;\n'.format(row[3])
+            +'\t rdfs:label "{}"@en .\n'.format(course)
+            +'focu:grade{} rdfs:subPropertyOf focu:Grades.\n'.format(course)
+            )
 
 cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")
 count=0

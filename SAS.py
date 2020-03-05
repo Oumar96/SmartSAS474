@@ -74,6 +74,17 @@ def get_topics_of_course(course):
             topic_name = row[0]
             print(topic_name, ": ",link_of_topic)
 
+# def get_topics_student_famliar_with(student):
+#     subject = "<http://example.org/"+student+">"
+#     focu:Grades "A+ AHSC220" ;
+#     query = """SELECT ?course
+#                 WHERE {{
+#                     {} focu:hasTopics ?link.
+#                 }}""".format(subject)
+
+#     qres = g.query(query)
+
+
 if __name__ == "__main__":
     g = Graph()
 
@@ -91,19 +102,28 @@ if __name__ == "__main__":
             if(inputText == "triples"):
                 get_total_number_of_triples()
                 inputText = input("Anything else ?\n")
+
             elif(inputText == "students"):
                 get_number_of_students()
                 inputText = input("Anything else ?\n")
+
             elif(inputText == "courses"):
                 get_number_of_courses()
                 inputText = input("Anything else ?\n")
+
             elif(inputText == "topics"):
                 get_number_of_topics()
                 inputText = input("Anything else ?\n")
+
             elif(inputText == "course topics"):
                 inputText = input("What course do you want the topics for ?\n")
                 get_topics_of_course(inputText)
                 inputText = input("Anything else ?\n")
+
+            # elif(inputText == "student topics"):
+            #     inputText = input("For what students do you want to know the topics they are familiar with?\n")
+            #     get_topics_of_course(inputText)
+
             elif(inputText == "stop"):
                 print("Good bye !\n")
                 actif = False
