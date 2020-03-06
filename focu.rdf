@@ -47,10 +47,10 @@ focu:courseTopics a rdf:Class ;
     rdfs:range focu:Literal ;
 	rdfs:label "courseTopics"@en .
 
-focu:grade a rdfs:Property ;
+focu:Grades a rdfs:Property ;
     rdfs:domain focu:student ;
     rdfs:range rdfs:literal ;
-	rdfs:label "grade"@en .
+	rdfs:label "Grades"@en .
 
 focu:isEnrolledAt a rdf:Property ;
 	 rdfs:domain focu:student ;
@@ -79,9 +79,9 @@ foaf:familyName "Da" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "steph.da@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "C+" ;
-focu:gradeCOEN212 "C" ;
-focu:gradeCOEN231 "C" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C COEN212" ;
+focu:Grades "F COEN231" ;
 rdfs:label "Stephen Da"@en .
 
 <Sandy#me>
@@ -91,9 +91,9 @@ foaf:familyName "Jones" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "S.Jones@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "A+" ;
-focu:gradeCOEN212 "A+" ;
-focu:gradeCOEN231 "A+" ;
+focu:Grades "A+ AHSC220" ;
+focu:Grades "A+ COEN212" ;
+focu:Grades "A+ COEN231" ;
 rdfs:label "Sandy Jones"@en .
 
 <Lina#me>
@@ -103,9 +103,9 @@ foaf:familyName "Matthews" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "L.Matthews@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "C+" ;
-focu:gradeCOEN212 "C+" ;
-focu:gradeCOEN231 "C+" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C+ COEN212" ;
+focu:Grades "C+ COEN231" ;
 rdfs:label "Lina Matthews"@en .
 
 <Tina#me>
@@ -115,9 +115,9 @@ foaf:familyName "Turner" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "T.Turner@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "A+" ;
-focu:gradeCOEN212 "A" ;
-focu:gradeCOEN231 "A+" ;
+focu:Grades "A+ AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "A+ COEN231" ;
 rdfs:label "Tina Turner"@en .
 
 <Charlie#me>
@@ -127,9 +127,9 @@ foaf:familyName "Schneider" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "C.Schneider@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "B+" ;
-focu:gradeCOEN212 "A+" ;
-focu:gradeCOEN231 "B+" ;
+focu:Grades "B+ AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "B+ COEN231" ;
 rdfs:label "Charlie Schneider"@en .
 
 <Karter#me>
@@ -139,9 +139,9 @@ foaf:familyName "Roberts" ;
 foaf:age "25"^^xsd:int ;
 foaf:mbox "K.Roberts@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "A-" ;
-focu:gradeCOEN212 "B+" ;
-focu:gradeCOEN231 "A" ;
+focu:Grades "A- AHSC220" ;
+focu:Grades "B+ COEN212" ;
+focu:Grades "A COEN231" ;
 rdfs:label "Karter Roberts"@en .
 
 <Tyshawn#me>
@@ -163,9 +163,9 @@ foaf:familyName "Ramsey" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "A.Ramsey@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "B-" ;
-focu:gradeCOEN212 "B" ;
-focu:gradeCOEN231 "B+" ;
+focu:Grades "B- AHSC220" ;
+focu:Grades "B COEN212" ;
+focu:Grades "B+ COEN231" ;
 rdfs:label "Armando Ramsey"@en .
 
 <Gina#me>
@@ -175,9 +175,9 @@ foaf:familyName "Ochoa" ;
 foaf:age "20"^^xsd:int ;
 foaf:mbox "G.Ochoa@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "A" ;
-focu:gradeCOEN212 "A" ;
-focu:gradeCOEN231 "A" ;
+focu:Grades "A AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "A COEN231" ;
 rdfs:label "Gina Ochoa"@en .
 
 <Sandra#me>
@@ -187,9 +187,9 @@ foaf:familyName "Rosario" ;
 foaf:age "24"^^xsd:int ;
 foaf:mbox "S.Rosario@example.org" ;
 foaf:schoolHomepage "http://www.concordia.ca/" ;
-focu:gradeAHSC220 "F" ;
-focu:gradeCOEN212 "C+" ;
-focu:gradeCOEN231 "A+" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C+ COEN212" ;
+focu:Grades "C COEN231" ;
 rdfs:label "Sandra Rosario"@en .
 
 <Concordia>
@@ -227,3 +227,4 @@ focu:isEnrolledAt <Concordia>.
 
 <Sandra#me>
 focu:isEnrolledAt <Concordia>.
+

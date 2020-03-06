@@ -94,7 +94,7 @@ def get_topics_student_famliar_with(student):
             all_topics.append(topic.get("topic_name"))
             # print(topic.get("topic_name"))
         print("A step closer...")
-    
+
     all_topics = list(dict.fromkeys(all_topics))
     for topic in all_topics:
         print(topic)
@@ -118,6 +118,52 @@ def get_courses_passed_by_student(student):
             classes_passed.append(course)
             print("{} passed {}".format(student,course))
     return classes_passed
+
+def get_student_familiar_with_topic(topic):
+    topic = "Biopsychosocial model"
+    topic_formated = topic.replace(" ","_")
+    link = "<http://dbpedia.org/resource/"+topic_formated+">"
+
+    query = """SELECT ?course
+                WHERE {{
+                    ?course focu:hasTopics {}.
+                }}""".format(link)
+
+    qres = g.query(query)
+
+    query2 = """SELECT ?student ?course
+            WHERE {{
+                ?student focu:Grades ?course.
+            }}"""
+    query_all_grades = g.query(query2)
+
+    all_familiar_with = []
+    for row in qres:
+        for grade in query_all_grades:
+            student = grade[0]
+            grade_for_course = grade[1]
+            index_of_space = grade_for_course.index(" ")
+            grade = grade_for_course[:index_of_space]
+            course = URIRef("http://example.org/"+grade_for_course[index_of_space+1:])
+            if(course == row[0]):
+                if(grade != "F"):
+                    all_familiar_with.append(student)
+
+    all_familiar_with = list(dict.fromkeys(all_familiar_with))
+    # print(all_familiar_with)
+    for familiar_with in all_familiar_with:
+         print(familiar_with, "is familiar with the topic")
+        # formated_familiar_with = "<{}>".format(familiar_with)
+        # print(type(formated_familiar_with))
+        # query3 = """SELECT ?label
+        #         WHERE {{
+        #             {} rdfs:label ?label.
+        #         }}""".format(formated_familiar_with)
+        # print(query3)
+        # qfamiliarres = g.query(query3)
+        # for res in qfamiliarres:
+        #     print(res[0], "is familiar with the topic")
+
 
 if __name__ == "__main__":
     g = Graph()
@@ -154,6 +200,11 @@ if __name__ == "__main__":
                 print("These are all topics covered:")
                 topics = get_topics_of_course(inputText)
                 print_course_topics(topics)
+                inputText = input("Anything else ?\n")
+
+            elif(inputText == "familiar with"):#5
+                inputText = input("For what topic do you want to know the students who are familiar with it?\n")
+                get_student_familiar_with_topic(inputText)
                 inputText = input("Anything else ?\n")
 
             elif(inputText == "student topics"):#6

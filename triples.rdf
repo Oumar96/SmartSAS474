@@ -226,7 +226,9 @@ focu:isEnrolledAt <Concordia>.
 focu:isEnrolledAt <Concordia>.
 
 <Sandra#me>
-focu:isEnrolledAt <Concordia>.<AHSC220> a focu:Course ;
+focu:isEnrolledAt <Concordia>.
+
+<AHSC220> a focu:Course ;
 	 focu:courseSubject "A" ;
 	 focu:courseNumber "H" ;
 	 focu:courseName "Lifespan Growth and Development for Practitioners" ;
