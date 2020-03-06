@@ -26,7 +26,6 @@ for row in cursor:
             + '\t focu:courseName "{}" ;\n'.format(row[2])
             +'\t focu:courseDescription "{}" ;\n'.format(row[3])
             +'\t rdfs:label "{}"@en .\n'.format(course)
-            +'focu:grade{} rdfs:subPropertyOf focu:Grades.\n'.format(course)
             )
 
 cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")

@@ -51,8 +51,7 @@ def get_topics_of_course(course):
                 }}""".format(subject)
 
     qres = g.query(query)
-    
-    print("These are all topics covered:")
+    topics = []
     # Getting all topics
     for row in qres:
         link_of_topic = row[0]
@@ -72,18 +71,53 @@ def get_topics_of_course(course):
         qres2 = dbpediaGraph.query(query2)
         for row in qres2:
             topic_name = row[0]
-            print(topic_name, ": ",link_of_topic)
+            info = {
+                "topic_name":topic_name,
+                "link_of_topic":link_of_topic
+            }
+            topics.append(info)
+    return topics
 
-# def get_topics_student_famliar_with(student):
-#     subject = "<http://example.org/"+student+">"
-#     focu:Grades "A+ AHSC220" ;
-#     query = """SELECT ?course
-#                 WHERE {{
-#                     {} focu:hasTopics ?link.
-#                 }}""".format(subject)
 
-#     qres = g.query(query)
+def print_course_topics(topics):
+    for topic in topics:
+        print(topic.get("topic_name"), ": ",topic.get("link_of_topic"))
 
+def get_topics_student_famliar_with(student):
+    classes_passed_by_student = get_courses_passed_by_student(student)
+
+    print(student, "is familiar with the following topics(be patient might take a while):")
+    all_topics = []
+    for class_passed in classes_passed_by_student:
+        topics_for_class = get_topics_of_course(class_passed)
+        for topic in topics_for_class:
+            all_topics.append(topic.get("topic_name"))
+            # print(topic.get("topic_name"))
+        print("A step closer...")
+    
+    all_topics = list(dict.fromkeys(all_topics))
+    for topic in all_topics:
+        print(topic)
+
+
+def get_courses_passed_by_student(student):
+    subject = "<http://example.org/"+student+"#me>"
+
+    query = """SELECT ?course
+                WHERE {{
+                    {} focu:Grades ?course.
+                }}""".format(subject)
+
+    qres = g.query(query)
+    classes_passed = []
+    for row in qres:
+        index_of_space = row[0].index(" ")
+        grade = row[0][:index_of_space]
+        course = row[0][index_of_space+1:]
+        if(grade != "F"):
+            classes_passed.append(course)
+            print("{} passed {}".format(student,course))
+    return classes_passed
 
 if __name__ == "__main__":
     g = Graph()
@@ -99,30 +133,33 @@ if __name__ == "__main__":
             actif = False
 
         else:
-            if(inputText == "triples"):
+            if(inputText == "triples"): #1
                 get_total_number_of_triples()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "students"):
+            elif(inputText == "students"): #2
                 get_number_of_students()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "courses"):
+            elif(inputText == "courses"): #2
                 get_number_of_courses()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "topics"):
+            elif(inputText == "topics"): #2
                 get_number_of_topics()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "course topics"):
+            elif(inputText == "course topics"): #3
                 inputText = input("What course do you want the topics for ?\n")
-                get_topics_of_course(inputText)
+                print("These are all topics covered:")
+                topics = get_topics_of_course(inputText)
+                print_course_topics(topics)
                 inputText = input("Anything else ?\n")
 
-            # elif(inputText == "student topics"):
-            #     inputText = input("For what students do you want to know the topics they are familiar with?\n")
-            #     get_topics_of_course(inputText)
+            elif(inputText == "student topics"):#6
+                inputText = input("For what students do you want to know the topics they are familiar with?\n")
+                get_topics_student_famliar_with(inputText)
+                inputText = input("Anything else ?\n")
 
             elif(inputText == "stop"):
                 print("Good bye !\n")
