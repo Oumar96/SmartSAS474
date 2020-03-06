@@ -120,7 +120,6 @@ def get_courses_passed_by_student(student):
     return classes_passed
 
 def get_student_familiar_with_topic(topic):
-    topic = "Biopsychosocial model"
     topic_formated = topic.replace(" ","_")
     link = "<http://dbpedia.org/resource/"+topic_formated+">"
 
@@ -150,19 +149,16 @@ def get_student_familiar_with_topic(topic):
                     all_familiar_with.append(student)
 
     all_familiar_with = list(dict.fromkeys(all_familiar_with))
-    # print(all_familiar_with)
     for familiar_with in all_familiar_with:
-         print(familiar_with, "is familiar with the topic")
-        # formated_familiar_with = "<{}>".format(familiar_with)
-        # print(type(formated_familiar_with))
-        # query3 = """SELECT ?label
-        #         WHERE {{
-        #             {} rdfs:label ?label.
-        #         }}""".format(formated_familiar_with)
-        # print(query3)
-        # qfamiliarres = g.query(query3)
-        # for res in qfamiliarres:
-        #     print(res[0], "is familiar with the topic")
+        formated_familiar_with = "<{}>".format(familiar_with)
+        query3 = """PREFIX rdfs:<https://www.w3.org/2000/01/rdf-schema#>
+                SELECT ?object
+                WHERE {{
+                    {} rdfs:label ?object.
+                }}""".format(formated_familiar_with)
+        qfamiliarres = g.query(query3)
+        for res in qfamiliarres:
+            print(res[0], "is familiar with the topic")
 
 
 if __name__ == "__main__":
