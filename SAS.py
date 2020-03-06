@@ -83,6 +83,7 @@ def print_course_topics(topics):
     for topic in topics:
         print(topic.get("topic_name"), ": ",topic.get("link_of_topic"))
 
+
 def get_topics_student_famliar_with(student):
     classes_passed_by_student = get_courses_passed_by_student(student)
 
@@ -196,6 +197,11 @@ if __name__ == "__main__":
                 print("These are all topics covered:")
                 topics = get_topics_of_course(inputText)
                 print_course_topics(topics)
+                inputText = input("Anything else ?\n")
+
+            elif(inputText == "courses passed"): #4
+                inputText = input("For which student do you want to know the classes that he/she passed ?\n")
+                get_courses_passed_by_student(inputText)
                 inputText = input("Anything else ?\n")
 
             elif(inputText == "familiar with"):#5
