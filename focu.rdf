@@ -4,122 +4,199 @@ PREFIX xsd: <https://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <https://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX focu: <http://focu.io/schema#>
+PREFIX owl: <https://www.w3.org/2002/07/owl#>
+
+focu:course a rdfs:Class .
+
+focu:university a rdfs:Class ;
+	 rdfs:subClassOf foaf:Organization ;
+	 rdfs:label "University"@en .
+
+focu:student a rdfs:Class ;
+	 rdfs:subClassOf foaf:Person ;
+	 rdfs:label "Student"@en .
+
+focu:IDNumber a rdfs:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range focu:literal ;
+    a owl:InverseFunctionalProperty ;
+	rdfs:label "IDnumber"@en .
+
+focu:courseName a rdfs:Property ;
+    rdfs:domain focu:course ;
+    rdfs:range focu:literal ;
+	rdfs:label "courseNumber"@en .
+
+focu:courseNumber a rdfs:Property ;
+    rdfs:domain focu:course ;
+    rdfs:range focu:literal ;
+	rdfs:label "courseNumber"@en .
+
+focu:courseDescription a rdfs:Property ;
+    rdfs:domain focu:course ;
+    rdfs:range focu:literal ;
+	rdfs:label "courseDescription"@en.
+
+focu:courseSubject a rdf:Property ;
+    rdfs:domain focu:course ;
+    rdfs:range focu:literal ;
+	rdfs:label "courseSubject"@en .
+
+focu:courseTopics a rdf:Class ;
+    rdfs:domain focu:course ;
+    rdfs:range focu:Literal ;
+	rdfs:label "courseTopics"@en .
+
+focu:Grades a rdfs:Property ;
+    rdfs:domain focu:student ;
+    rdfs:range rdfs:literal ;
+	rdfs:label "Grades"@en .
+
+focu:isEnrolledAt a rdf:Property ;
+	 rdfs:domain focu:student ;
+	 rdfs:range focu:university;
+	 rdfs:label "is enrolled at"@en .
+
+focu:completedCourseGrade a rdf:Property ;
+	 rdfs:domain focu:Student ;
+	 rdfs:range focu:grade ;
+	 rdfs:label "completed course grade is"@en .
+
+focu:takesCourse a rdf:Property ;
+	 rdfs:domain focu:student ;
+	 rdfs:range focu:course ;
+	 rdfs:label "takes course"@en .
+
+focu:hasTopics a rdf:Property ;
+	 rdfs:domain focu:courseDescription ;
+	 rdfs:range focu:courseTopics ;
+	 rdfs:label "has topics"@en .
 
 <Stephen#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Stephen" ;
 foaf:familyName "Da" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "steph.da@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C COEN212" ;
+focu:Grades "F COEN231" ;
+rdfs:label "Stephen Da"@en .
 
 <Sandy#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Sandy" ;
 foaf:familyName "Jones" ;
 foaf:age "23"^^xsd:int ;
 foaf:mbox "S.Jones@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "A+ AHSC220" ;
+focu:Grades "A+ COEN212" ;
+focu:Grades "A+ COEN231" ;
+rdfs:label "Sandy Jones"@en .
 
 <Lina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Lina" ;
 foaf:familyName "Matthews" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "L.Matthews@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C+ COEN212" ;
+focu:Grades "C+ COEN231" ;
+rdfs:label "Lina Matthews"@en .
 
 <Tina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Tina" ;
 foaf:familyName "Turner" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "T.Turner@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "A+ AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "A+ COEN231" ;
+rdfs:label "Tina Turner"@en .
 
 <Charlie#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Charlie" ;
 foaf:familyName "Schneider" ;
 foaf:age "22"^^xsd:int ;
 foaf:mbox "C.Schneider@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "B+ AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "B+ COEN231" ;
+rdfs:label "Charlie Schneider"@en .
 
 <Karter#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Karter" ;
 foaf:familyName "Roberts" ;
 foaf:age "25"^^xsd:int ;
 foaf:mbox "K.Roberts@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "A- AHSC220" ;
+focu:Grades "B+ COEN212" ;
+focu:Grades "A COEN231" ;
+rdfs:label "Karter Roberts"@en .
 
 <Tyshawn#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Tyshawn" ;
 foaf:familyName "Norris" ;
 foaf:age "28"^^xsd:int ;
 foaf:mbox "T.Norris@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "B+ AHSC220" ;
+focu:Grades "A- COEN212" ;
+focu:Grades "B- COEN231" ;
+rdfs:label "Tyshawn Norris"@en .
 
 <Armando#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Armando" ;
 foaf:familyName "Ramsey" ;
 foaf:age "21"^^xsd:int ;
 foaf:mbox "A.Ramsey@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "B- AHSC220" ;
+focu:Grades "B COEN212" ;
+focu:Grades "B+ COEN231" ;
+rdfs:label "Armando Ramsey"@en .
 
 <Gina#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Gina" ;
 foaf:familyName "Ochoa" ;
 foaf:age "20"^^xsd:int ;
 foaf:mbox "G.Ochoa@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "A AHSC220" ;
+focu:Grades "A COEN212" ;
+focu:Grades "A COEN231" ;
+rdfs:label "Gina Ochoa"@en .
 
 <Sandra#me>
-a foaf:Person ;
+a focu:Student ;
 foaf:givenName "Sandra" ;
 foaf:familyName "Rosario" ;
 foaf:age "24"^^xsd:int ;
 foaf:mbox "S.Rosario@example.org" ;
-foaf:schoolHomepage "http://www.concordia.ca/" .
-
-
-focu:Student
-a rdfs:Class;
-rdfs:subClassOf foaf:Person.
-
-focu:Professor
-a rdfs:Class;
-rdfs:subClassOf foaf:Person.  
-
-focu:University
-a rdfs:Class;
-rdfs:subClassOf foaf:Organization.
-
-focu:isEnrolledAt
-a rdf:Property.
-
-focu:isEnrolledAt
-rdfs:domain focu:Student.
-
-focu:isEnrolledAt
-rdfs:range focu:University.
-
-focu:teaches
-a rdf:Property.
-
-focu:teaches
-rdfs:domain focu:Professor.
-
-focu:teaches
-rdfs:range focu:Student.
+foaf:schoolHomepage "http://www.concordia.ca/" ;
+focu:Grades "C+ AHSC220" ;
+focu:Grades "C+ COEN212" ;
+focu:Grades "C COEN231" ;
+rdfs:label "Sandra Rosario"@en .
 
 <Concordia>
 a focu:University;
-foaf:homepage "http://www.concordia.ca/";
-rdfs:seeAlso <http://dbpedia.org/resource/Concordia_University>.
+foaf:homepage "http://www.concordia.ca/" ;
+rdfs:seeAlso <http://dbpedia.org/resource/Concordia_University> ;
+rdfs:label "Concordia University"@en .
 
 <Stephen#me>
 focu:isEnrolledAt <Concordia>.
@@ -150,3 +227,4 @@ focu:isEnrolledAt <Concordia>.
 
 <Sandra#me>
 focu:isEnrolledAt <Concordia>.
+
