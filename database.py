@@ -71,44 +71,6 @@ class Database:
         self.db.commit()
 
 
-    def update(self, table_name, where, **columns):
-        """
-        Update row(s) in table where condition is met
-
-        :param table_name:  Name of the table to be used.
-        :param where: Condition to be used for update.
-        :param **columns: Columns and values that will replace rows where condition is met.
-        """
-        self.cols = ""
-
-        for col_name, col_type in columns.items():
-            self.cols += col_name+"='"+col_type+"',"
-        self.cols = self.cols[0:len(self.cols)-1]
-
-        self.db.execute("UPDATE {} SET {} where {}".format(
-            table_name, self.cols, where))
-        self.db.commit()
-
-    def insert_or_update(self, table_name, *data):
-        """
-        Insert if row does not exist else update
-
-        :param table_name:  Name of the table to be used.
-        :param where: Condition to be used for update.
-        :param **columns: Columns and values that will replace rows where condition is met.
-        """
-        self.data = ""
-
-        for value in data:
-            self.data += '"'+value+'"'+','
-        self.data = self.data[0:len(self.data)-1]
-
-        self.db.execute("INSERT OR REPLACE INTO {} values({})".format(
-            table_name, self.data
-        ))
-        self.db.commit()
-
-
     def get_items(self, table_name, where=1):
         """
         Get row(s) in table where condition is met
