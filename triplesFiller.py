@@ -20,12 +20,14 @@ cursor = conn.execute("SELECT * from courses")
 
 for row in cursor:
     course = row[0].replace(' ','').replace(',','').replace('*','')
+    description = row[3].replace('\n', ' ').replace("\n\xa0\n"," ")
     triples+=('<{}> a focu:Course ;\n'.format(course)
             + '\t focu:courseSubject "{}" ;\n'.format(course[0])
             + '\t focu:courseNumber "{}" ;\n'.format(course[1])
             + '\t focu:courseName "{}" ;\n'.format(row[2])
-            +'\t focu:courseDescription "{}" ;\n'.format(row[3])
+            +'\t focu:courseDescription "{}" ;\n'.format(description)
             +'\t rdfs:label "{}"@en .\n'.format(course)
+            +'focu:grade{} rdfs:subPropertyOf focu:Grades.\n'.format(course)
             )
 
 cursor2 = conn.execute("SELECT Course, Description FROM courses WHERE LENGTH(Description) > 15")
@@ -36,7 +38,7 @@ for row in cursor2:
     print("Course: ",row[0].replace(' ',''))
     print("Description: ", row[1])
     courseCode = row[0].replace(' ','')
-    description = row[1]
+    description = row[1].replace('\n', ' ').replace("\n\xa0\n"," ")
     URL = apiPrefix + description
     print("URL: ", URL)
     response_code=0

@@ -227,7 +227,6 @@ focu:isEnrolledAt <Concordia>.
 
 <Sandra#me>
 focu:isEnrolledAt <Concordia>.
-
 <AHSC220> a focu:Course ;
 	 focu:courseSubject "A" ;
 	 focu:courseNumber "H" ;
@@ -22754,7 +22753,496 @@ focu:gradeUNSS200 rdfs:subPropertyOf focu:Grades.
 	 focu:courseDescription "Prerequisite: UNSS 200 and Faculty recommendation. This course focuses on enhancing each student’s potential for academic success through developing strategies for active learning. Students explore techniques to enhance their understanding and retention of course material, including the principles of effective note-taking, active reading, preparing for exams and improving memory and concentration. Students are encouraged to apply these strategies in their other courses; for this reason, it is strongly recommended that this course be taken in conjunction with at least one other course. A final portfolio compiled by each participant demonstrates study strategies applied to discipline-specific coursework and reflects on the student’s progress through the term. Successful completion of this pass/fail course depends on excellent attendance and timely completion of all assigned work." ;
 	 rdfs:label "UNSS201"@en .
 focu:gradeUNSS201 rdfs:subPropertyOf focu:Grades.
-
+<COMP6231> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Distributed System Design " ;
+	 focu:courseDescription "COMP 6231 Distributed System Design (4 credits)  Principles of distributed computing: scalability, transparency, concurrency, consistency, fault tolerance. Client-server interaction technologies: interprocess communication, sockets, group communication, remote procedure call, remote method invocation, object request broker, CORBA, web services. Distributed server design techniques: process replication, fault tolerance through passive replication, high availability through active replication, coordination and agreement transactions and concurrency control. Designing software fault-tolerant highly available distributed systems using process replication. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6231"@en .
+focu:gradeCOMP6231 rdfs:subPropertyOf focu:Grades.
+<COMP6281> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Parallel Programming (*) " ;
+	 focu:courseDescription "COMP 6281 Parallel Programming (*) (4 credits)  Migration from Von Neumann to parallel processing architectures: shared-memory and message-passing paradigms; massively parallel computers; recent trends in commodity parallel processing; clusters, multi-core, CPU-GPU based heterogeneous computing. Issues of memory consistency and load balancing. Parallel algorithms for shared-memory and message passing platforms; efficiency and scalability; issues of performance overhead. Parallel programming environments: parallel programming models; languages; software tools. Laboratory: two hours per week. A project is required." ;
+	 rdfs:label "COMP6281"@en .
+focu:gradeCOMP6281 rdfs:subPropertyOf focu:Grades.
+<COMP6311> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Animation for Computer Games (*) " ;
+	 focu:courseDescription "COMP 6311 Animation for Computer Games (*) (4 credits) Prerequisite: COMP 6761 or equivalent, previously or concurrently.  Introduction to the algorithms, data structures, and techniques used in modelling and rendering dynamic scenes. Topics include principles of traditional animation, production pipeline, animation hardware and software, orientation representation and interpolation, modelling physical and articulated objects, forward and inverse kinematics, motion control and capture, key-frame, procedural, and behavioural animation, camera animation, scripting system, and free-form deformation. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6311"@en .
+focu:gradeCOMP6311 rdfs:subPropertyOf focu:Grades.
+<COMP6321> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Machine Learning " ;
+	 focu:courseDescription "COMP 6321 Machine Learning (4 credits)  Introduction to the fundamentals of machine learning. Linear models: linear and polynomial regression, overfitting, model selection, logistic regression, naive Bayes. Non-linear models: decision trees, instance-based learning, boosting, neural networks. Support vector machines and kernels. Computational learning theory. Experimental methodology, sources of error. Structured models: graphical models, deep belief networks. Unsupervised learning: k-means, mixture models, density estimation, expectation maximization, principle component analysis, eigenmaps and other dimensionality reduction methods. Learning in dynamical systems: hidden Markov models and other types of temporal/sequence models. Reinforcement learning. Survey of machine learning and its applications. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6321"@en .
+focu:gradeCOMP6321 rdfs:subPropertyOf focu:Grades.
+<COMP6331> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Game Development (*) " ;
+	 focu:courseDescription "COMP 6331 Advanced Game Development (*) (4 credits) Prerequisite: Permission of instructor.  Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): non‑player character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physics‑based techniques: collision detection and response. Networked gaming: multi‑player games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6331"@en .
+focu:gradeCOMP6331 rdfs:subPropertyOf focu:Grades.
+<COMP6341> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Computer Vision (*) " ;
+	 focu:courseDescription "COMP 6341 Computer Vision (*) (4 credits)  This course introduces basic techniques and concepts in computer vision including image formation, grouping and fitting, geometric vision, recognition, perceptual organization, and the state-of-the art software tools. Students learn fundamental algorithms and techniques, and gain experience in programming vision-based components; in particular, how to program in OpenCV, a powerful software interface used to process data captured from passive and active sensors. A project is required. Laboratory: two hours per week. Note: Students who have received credit for COMP 691 (Computer Vision) may not take this course for credit." ;
+	 rdfs:label "COMP6341"@en .
+focu:gradeCOMP6341 rdfs:subPropertyOf focu:Grades.
+<COMP6351> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Topics in Scientific Computation " ;
+	 focu:courseDescription "COMP 6351 Topics in Scientific Computation (4 credits)  Selected elements of numerical methods that are central to scientific computation. The precise contents of the course may differ somewhat from one offering to the next, but will include the following topics: An introduction to the numerical solution of nonlinear equations, continuation methods, numerical solution of initial value problems in ordinary differential equations, finite difference method, numerical stability theory, stiff equations, boundary value problems in ordinary differential equations, collocation methods, introduction to the numerical solution of partial differential equations, with emphasis on nonlinear diffusion problems. A project is required." ;
+	 rdfs:label "COMP6351"@en .
+focu:gradeCOMP6351 rdfs:subPropertyOf focu:Grades.
+<COMP6361> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Numerical Analysis of Nonlinear Equations " ;
+	 focu:courseDescription "COMP 6361 Numerical Analysis of Nonlinear Equations (4 credits)  An introduction to numerical algorithms for nonlinear equations, including discrete as well as continuous systems. The emphasis is on computer-aided numerical analysis rather than numerical simulation. This course is suitable for scientists and engineers with a practical interest in nonlinear phenomena. Topics include computational aspects of: homotopy and continuation methods, fixed points and stationary solutions, asymptotic stability, bifurcations, periodic solutions, transition to chaos, conservative systems, travelling wave solutions, discretization techniques. A variety of applications will be considered. Numerical software packages will be available. A project is required." ;
+	 rdfs:label "COMP6361"@en .
+focu:gradeCOMP6361 rdfs:subPropertyOf focu:Grades.
+<COMP6381> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Geometric Modelling " ;
+	 focu:courseDescription "COMP 6381 Digital Geometric Modelling (4 credits)  This course introduces the digital geometry modelling pipeline focusing on fundamental data structures and algorithms for digital representation and processing of 3D geometry.  Students  study a wide range of applications and solutions in computer-aided design, engineering, architecture reverse engineering, and medical applications. As triangle meshes are by far the most popular representation for 3D geometry, this course focuses on triangle mesh representations and data structures that enable the programmer to efficiently query and edit geometry. In addition, the course covers spline modelling: Hermite splines, Bezier splines, and B-Splines. A project is required." ;
+	 rdfs:label "COMP6381"@en .
+focu:gradeCOMP6381 rdfs:subPropertyOf focu:Grades.
+<COMP6411> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Comparative Study of Programming Languages " ;
+	 focu:courseDescription "COMP 6411 Comparative Study of Programming Languages (4 credits) Comparison of several high-level programming languages with respect to application areas, design, efficiency, and ease of use. The selected languages will demonstrate programming paradigms such as functional, logical, and scripting. Static and dynamic typing. Compilation and interpretation. Advanced implementation techniques. A project is required." ;
+	 rdfs:label "COMP6411"@en .
+focu:gradeCOMP6411 rdfs:subPropertyOf focu:Grades.
+<COMP6421> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Compiler Design (*) " ;
+	 focu:courseDescription "COMP 6421 Compiler Design (*) (4 credits)  Compiler organization and implementation: lexical analysis and parsing, syntax-directed translation, code optimization. Run-time systems. A project is required." ;
+	 rdfs:label "COMP6421"@en .
+focu:gradeCOMP6421 rdfs:subPropertyOf focu:Grades.
+<COMP6461> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Computer Networks and Protocols " ;
+	 focu:courseDescription "COMP 6461 Computer Networks and Protocols (4 credits)  Direct link networks: encoding, framing, error detection, flow control, example networks. Packet switching and forwarding: bridges, switches. Internetworking: Internet Protocol, routing, addressing, IPv6, multicasting, mobile IP. End-to-end protocols: UDP, TCP. Network security concepts. Application-level protocols. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6461"@en .
+focu:gradeCOMP6461 rdfs:subPropertyOf focu:Grades.
+<COMP6521> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Database Technology and Applications " ;
+	 focu:courseDescription "COMP 6521 Advanced Database Technology and Applications (4 credits)  Review of standard relational databases, query languages. Query processing and optimization. Parallel and distributed databases. Information integration. Data warehouse systems. Data mining and OLAP. Web databases and XML Active and logical databases, spatial and multimedia data management. Laboratory: Two hours per week." ;
+	 rdfs:label "COMP6521"@en .
+focu:gradeCOMP6521 rdfs:subPropertyOf focu:Grades.
+<COMP6531> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Foundations of the Semantic Web " ;
+	 focu:courseDescription "COMP 6531 Foundations of the Semantic Web (4 credits)  Web markup languages, World Wide Web Consortium (W3C) standards, Extensible Markup Language (XML) Resource Description Framework (RDF), schema for markup languages, Semantic Web, ontology development, markup languages for ontologies, Web Ontology Language (OWL), logical foundations of ontologies, description logics, reasoning with ontologies. A project is required." ;
+	 rdfs:label "COMP6531"@en .
+focu:gradeCOMP6531 rdfs:subPropertyOf focu:Grades.
+<COMP6591> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Introduction to Knowledge-Base Systems " ;
+	 focu:courseDescription "COMP 6591 Introduction to Knowledge-Base Systems (4 credits)  Review of first-order logic, relational algebra, and relational calculus. Fundamentals of logic programming. Logic for knowledge representation. Architecture of a knowledge-base system. Fundamentals of deductive databases. Top-down and bottom-up query processing. Some important query processing strategies and their comparison. Project or term paper on current research topics." ;
+	 rdfs:label "COMP6591"@en .
+focu:gradeCOMP6591 rdfs:subPropertyOf focu:Grades.
+<COMP6621> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Discrete Mathematics of Paul Erdös " ;
+	 focu:courseDescription "COMP 6621 Discrete Mathematics of Paul Erdös (4 credits)  Introduction to the methods and proof techniques of Paul Erdös that are particularly applicable to Computer Science. Proof of Bertrand’s postulate. The Erdös-Szekeres and the de Bruijn-Erdös theorems. Ramsey’s theorem and Ramsey numbers. Van der Waerden’s theorem and Van der Waerden numbers. Delta-systems and a proof of the Erdös-Lovász conjecture. The Erdös-Ko-Rado theorem. Extremal graph theory. Random graphs and graph colouring. The probabilistic method and its applications in theoretical Computer Science. A project is required." ;
+	 rdfs:label "COMP6621"@en .
+focu:gradeCOMP6621 rdfs:subPropertyOf focu:Grades.
+<COMP6631> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Large-Scale Optimization " ;
+	 focu:courseDescription "COMP 6631 Large-Scale Optimization (4 credits)  Mathematical modelling of large-scale optimization models. Design and implementation of large-scale optimization techniques: decomposition methods (Benders, Dantzig-Wolfe, Lagrangian Relaxation, Column Generation), branch-and-price techniques. Large-scale linear and non-linear programming techniques for network optimization and integer/discrete programming. Techniques for nonlinear non-convex continuous optimization: branch-and-bound methods, DC (difference of convex functions) programming, bilinear and biconvex optimization. Heuristics and meta-heuristics. A project is required. Note: Students who have received credit for this topic under a COMP 691Y number may not take this course for credit." ;
+	 rdfs:label "COMP6631"@en .
+focu:gradeCOMP6631 rdfs:subPropertyOf focu:Grades.
+<COMP6641> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Theory of Computation " ;
+	 focu:courseDescription "COMP 6641 Theory of Computation (4 credits)  General properties of algorithmic computations. Turing machines, universal Turing machines. Turing computable functions as a standard family of algorithms. Primitive recursive functions. Church’s thesis, recursive sets. Recursively enumerable sets and their properties. Rice’s theorem. Time and space complexity measures. Hierarchy of complexity measures. Advanced topics in complexity theory. A project is required." ;
+	 rdfs:label "COMP6641"@en .
+focu:gradeCOMP6641 rdfs:subPropertyOf focu:Grades.
+<COMP6651> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Algorithm Design Techniques " ;
+	 focu:courseDescription "COMP 6651 Algorithm Design Techniques (4 credits)  Mathematical preliminaries; Empirical and theoretical measures of algorithm efficiencies; Optimization and combinatorial techniques and algorithms including greedy algorithms, dynamic programming, branch-and-bound techniques and graph network algorithms; Amortized complexity analysis; String matching algorithms; NP-complete problems and approximate solutions; Probabilistic algorithms. A project is required." ;
+	 rdfs:label "COMP6651"@en .
+focu:gradeCOMP6651 rdfs:subPropertyOf focu:Grades.
+<COMP6661> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Combinatorial Algorithms " ;
+	 focu:courseDescription "COMP 6661 Combinatorial Algorithms (4 credits)  Representation and generation of combinatorial objects; search techniques; counting and estimation. Projects on selected applications from combinatorics and graph theory." ;
+	 rdfs:label "COMP6661"@en .
+focu:gradeCOMP6661 rdfs:subPropertyOf focu:Grades.
+<COMP6711> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Computational Geometry " ;
+	 focu:courseDescription "COMP 6711 Computational Geometry (4 credits)  Efficient algorithms and data structures to solve geometric problems. Problems discussed include convex hulls, line intersections, polygon triangulation, point location, range searching, Voronoi diagrams, Delaunay triangulations, interval trees and segment trees, arrangements, robot motion planning, binary space partitions, quadtrees, and visitility. Algorithmic methods include plane sweep, incremental insertion, randomization, divide and conquer. Emphasis will be given to computation and complexity, with applications in computer graphics, computer aided design, geographic information systems, networks, mesh generation, databases, and robot motion planning. A project is required." ;
+	 rdfs:label "COMP6711"@en .
+focu:gradeCOMP6711 rdfs:subPropertyOf focu:Grades.
+<COMP6721> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Applied Artificial Intelligence (*) " ;
+	 focu:courseDescription "COMP 6721 Applied Artificial Intelligence (*) (4 credits) The course covers heuristic and adversarial searches for concrete applications. It then discusses automated reasoning, advanced knowledge representation and dealing with uncertainly for Artificial Intelligence applications. Finally, it introduces autoencoders, recurrent neural networks and sequence to sequence models. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6721"@en .
+focu:gradeCOMP6721 rdfs:subPropertyOf focu:Grades.
+<COMP6731> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Pattern Recognition (*) " ;
+	 focu:courseDescription "COMP 6731 Pattern Recognition (*) (4 credits)  Pre-processing. Feature extraction and selection. Similarity between patterns and distance measurements. Syntactic and statistical approaches. Clustering analysis. Bayesian decision theory and discriminant functions. Clustering and classification techniques. Applications. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6731"@en .
+focu:gradeCOMP6731 rdfs:subPropertyOf focu:Grades.
+<COMP6741> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Intelligent Systems (*) " ;
+	 focu:courseDescription "COMP 6741 Intelligent Systems (*) (4 credits)  Knowledge representation and reasoning. Uncertainty and conflict resolution. Design of intelligent systems. Grammar-based, rule-based, and blackboard architectures. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6741"@en .
+focu:gradeCOMP6741 rdfs:subPropertyOf focu:Grades.
+<COMP6751> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Natural Language Analysis " ;
+	 focu:courseDescription "COMP 6751 Natural Language Analysis (4 credits)  Introduction to natural language processing. Structure of English. Grammars and parsing. Lexical and compositional semantics. Pragmatic issues. Applications in text mining and information extraction. A project is required. Note: Students who have received credit for COMP 7741 before September 2011 may not take this course for credit." ;
+	 rdfs:label "COMP6751"@en .
+focu:gradeCOMP6751 rdfs:subPropertyOf focu:Grades.
+<COMP6761> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced 3D Graphics for Game Programming " ;
+	 focu:courseDescription "COMP 6761 Advanced 3D Graphics for Game Programming (4 credits)  Fundamental algorithms, techniques, and software engineering principles for 3D graphics. Introduction to real-time graphics application architecture; review of basic 3D concepts of modelling, viewing, and rendering. 3D graphics functions, pipeline, and performance. Hierarchical 3D graphics. Algorithms for occlusion culling, collision detection, photorealism, shadows, and textures. Current trends and state-of-the-art graphics and physics algorithms. Laboratory: Two hours per week." ;
+	 rdfs:label "COMP6761"@en .
+focu:gradeCOMP6761 rdfs:subPropertyOf focu:Grades.
+<COMP6771> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Image Processing (*)  " ;
+	 focu:courseDescription "COMP 6771 Image Processing (*) (4 credits)  Digital image fundamentals; image enhancement: histogram processing, filtering in the spatial domain, filtering in the frequency domain; image restoration and reconstruction; image segmentation: line detection, Hough transform, edge detection and linking, thresholding, region splitting and merging; image compression; introduction to wavelet transform and multi-resolution processing. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6771"@en .
+focu:gradeCOMP6771 rdfs:subPropertyOf focu:Grades.
+<COMP6781> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Statistical Natural Language Processing " ;
+	 focu:courseDescription "COMP 6781 Statistical Natural Language Processing (4 credits)  The course covers robust methods to natural language processing (NLP) and their applications to manipulate large text collections. Topics covered in this course include: Zipf’s law, information retrieval, statistical machine translation, N-gram language models and smoothing techniques, word sense disambiguation, part-of-speech tagging and probabilistic grammars and parsing. A project is required." ;
+	 rdfs:label "COMP6781"@en .
+focu:gradeCOMP6781 rdfs:subPropertyOf focu:Grades.
+<COMP6791> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Information Retrieval and Web Search (*) " ;
+	 focu:courseDescription "COMP 6791 Information Retrieval and Web Search (*) (4 credits)  Basics of information retrieval (IR): Boolean, vector space and probabilistic models. Tokenization and creation of inverted files. Weighting schemes. Evaluation of IR systems: precision, recall, E-measure. Relevance feedback and query expansion. Application of IR to Web search engines: XML, link analysis, PageRank algorithm. Text categorization and clustering techniques as used in spam filtering. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "COMP6791"@en .
+focu:gradeCOMP6791 rdfs:subPropertyOf focu:Grades.
+<COMP6811> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Bioinformatics Algorithms " ;
+	 focu:courseDescription "COMP 6811 Bioinformatics Algorithms (4 credits)  The principal objectives of the course are to cover the major algorithms used in bioinformatics; sequence alignment, multiple sequence alignment, phylogeny; classifying patterns in sequences; secondary structure prediction; 3D structure prediction; analysis of gene expression data. This includes dynamic programming, machine learning, simulated annealing, and clustering algorithms. Algorithmic principles will be emphasized. A project is required." ;
+	 rdfs:label "COMP6811"@en .
+focu:gradeCOMP6811 rdfs:subPropertyOf focu:Grades.
+<COMP6821> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Bioinformatics Databases and Systems " ;
+	 focu:courseDescription "COMP 6821 Bioinformatics Databases and Systems (4 credits)  The principal objectives of the course are to survey the needs of bioinformatics for data management, knowledge management, and computational support; to provide in-depth description of an example of each kind of database and system; and to introduce advanced database technology and software technology relevant to the needs of bioinformatics. A project is required." ;
+	 rdfs:label "COMP6821"@en .
+focu:gradeCOMP6821 rdfs:subPropertyOf focu:Grades.
+<COMP691> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Topics in Computer Science I " ;
+	 focu:courseDescription "COMP 691 Topics in Computer Science I (4 credits)  Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that course content has changed. Changes in content will be indicated by the letter following the course number, e.g., COMP 691A, COMP 691B, etc." ;
+	 rdfs:label "COMP691"@en .
+focu:gradeCOMP691 rdfs:subPropertyOf focu:Grades.
+<COMP6961> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Graduate Seminar in Computer Science " ;
+	 focu:courseDescription "COMP 6961 Graduate Seminar in Computer Science (1 credit)  Students will have to attend a selected set of departmental seminars and submit a comprehensive report on the topics presented in one of the seminars. This course is graded on a pass/fail basis." ;
+	 rdfs:label "COMP6961"@en .
+focu:gradeCOMP6961 rdfs:subPropertyOf focu:Grades.
+<COMP6971> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Project and Report  " ;
+	 focu:courseDescription "COMP 6971 Project and Report (4 credits) Prerequisite: Completion of 16 credits; a CGPA of 3.40 or greater; permission of the Department.  See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week. Note: Students who have received credit for SOEN 6951 or SOEN 6971 may not take this course for credit." ;
+	 rdfs:label "COMP6971"@en .
+focu:gradeCOMP6971 rdfs:subPropertyOf focu:Grades.
+<COMP7241> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Parallel Algorithms and Architectures " ;
+	 focu:courseDescription "COMP 7241 Parallel Algorithms and Architectures (4 credits) Prerequisite: COMP 6281 or permission of instructor.  Parallel architectures; memory organization, interconnection structures, data routing techniques. Parallel algorithms; paradigms and design techniques, complexity analysis, algorithms for various computation models. A project is required." ;
+	 rdfs:label "COMP7241"@en .
+focu:gradeCOMP7241 rdfs:subPropertyOf focu:Grades.
+<COMP7251> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Mobile Computing and Wireless Networks " ;
+	 focu:courseDescription "COMP 7251 Mobile Computing and Wireless Networks (4 credits) Prerequisite: COMP 6461.  Introduction to mobile computing and wireless networks:local (LAN), personal (PAN) and metropolitan (MAN). Mobile ad hoc networks and sensor networks. Algorithms and protocols for medium access, routing, topology control, and reliable transport. A project is required." ;
+	 rdfs:label "COMP7251"@en .
+focu:gradeCOMP7251 rdfs:subPropertyOf focu:Grades.
+<COMP7451> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Semantics of Programming Languages " ;
+	 focu:courseDescription "COMP 7451 Semantics of Programming Languages (4 credits) Prerequisite: COMP 6411.  The need for semantic descriptions of programming languages. Classification of semantics: operational, axiomatic, model-theoretic, algebraic, denotational. Classification of languages: procedural, functional, logic, equational. Applications: verification, construction, language design, temporal logic for distributed systems, semantics for advanced languages." ;
+	 rdfs:label "COMP7451"@en .
+focu:gradeCOMP7451 rdfs:subPropertyOf focu:Grades.
+<COMP7521> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Cryptography and Data Security " ;
+	 focu:courseDescription "COMP 7521 Cryptography and Data Security (4 credits) Prerequisite: COMP 6651.  Traditional cryptography. Information theory. Private-key (symmetric-key) and public-key (asymmetric-key) cryptographic algorithms. Advanced Encryption Standard (Rijndael). Cryptographic hash functions. Digital signatures. Data-origin authentication and data integrity. Entity authentication. Key distribution, management, recovery, and exhaustion. Authentication protocols. Security services (confidentiality, authentication, integrity, access control, non-repudiation, and availability) and mechanisms (encryption, data-integrity mechanisms, digital signatures, keyed hashes, access-control mechanisms, challenge-response authentication, traffic padding, and routing control). Projects will be offered in selected topics in cryptography." ;
+	 rdfs:label "COMP7521"@en .
+focu:gradeCOMP7521 rdfs:subPropertyOf focu:Grades.
+<COMP7531> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Database Systems Principles " ;
+	 focu:courseDescription "COMP 7531 Database Systems Principles (4 credits) Prerequisite: COMP 6521.  Database models. Algebraic, logical, and deductive database languages. Query equivalence and optimization. Query rewriting, information integration and data exchange. Incomplete information and complex values. Introduction to current research topics. A project is required." ;
+	 rdfs:label "COMP7531"@en .
+focu:gradeCOMP7531 rdfs:subPropertyOf focu:Grades.
+<COMP7651> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Analysis of Algorithms " ;
+	 focu:courseDescription "COMP 7651 Advanced Analysis of Algorithms (4 credits) Prerequisite: COMP 6651.  Amortized analysis of algorithms, NP-hardness and approximation algorithms, online algorithms, randomized algorithms. Selected topics of current interest. Project or term paper." ;
+	 rdfs:label "COMP7651"@en .
+focu:gradeCOMP7651 rdfs:subPropertyOf focu:Grades.
+<COMP7661> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Rendering and Animation " ;
+	 focu:courseDescription "COMP 7661 Advanced Rendering and Animation (4 credits) Prerequisite: COMP 6761.  Advanced concepts in rendering and animation with emphasis on computational techniques for synthesizing complex realistic images, both static and dynamic. Topics include: overview of computer graphics techniques in games, cinema, and engineering; realistic rendering methods in real time; animation techniques including physics-based animation. A project is required." ;
+	 rdfs:label "COMP7661"@en .
+focu:gradeCOMP7661 rdfs:subPropertyOf focu:Grades.
+<COMP7751> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Pattern Recognition  " ;
+	 focu:courseDescription "COMP 7751 Advanced Pattern Recognition (4 credits) Prerequisite: COMP 6731.  Pattern recognition principles; modern methods in digitization and data acquisition; advanced topics in feature extraction and selection; principal component analysis and clustering techniques; multiple classifiers and expert systems; advanced topics in neural networks in pattern recognition, performance evaluation and error reduction. Applications. A project is required." ;
+	 rdfs:label "COMP7751"@en .
+focu:gradeCOMP7751 rdfs:subPropertyOf focu:Grades.
+<COMP7781> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Image Processing " ;
+	 focu:courseDescription "COMP 7781 Advanced Image Processing (4 credits) Prerequisite: COMP 6771 or permission of instructor.  Digital image processing; segmentation morphological processing; wavelet transforms and multi-resolution analysis; partial differential equation approach; variational methods; diffusion and shock filters; Markov random field and Bayesian inference; energy minimization framework: snakes, active contours, Mumford-Shah model, level set method; numerical implementation; applications; image inpainting; registration; and document processing. A project is required." ;
+	 rdfs:label "COMP7781"@en .
+focu:gradeCOMP7781 rdfs:subPropertyOf focu:Grades.
+<COMP791> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Topics in Computer Science II " ;
+	 focu:courseDescription "COMP 791 Topics in Computer Science II (4 credits)  Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that course content has changed. Changes in content will be indicated by the letter following the course number, e.g. COMP 791A, COMP 791B, etc." ;
+	 rdfs:label "COMP791"@en .
+focu:gradeCOMP791 rdfs:subPropertyOf focu:Grades.
+<COMP7941> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Master’s Research and Thesis " ;
+	 focu:courseDescription "COMP 7941 Master’s Research and Thesis (29 credits)  Students are required to submit a thesis prepared under the guidance of a faculty member appointed by the GCS Graduate Studies Committee. The thesis must represent the result of the student’s independent work undertaken after admission to the program. The thesis will be evaluated by a committee appointed by the GCS Graduate Studies Committee." ;
+	 rdfs:label "COMP7941"@en .
+focu:gradeCOMP7941 rdfs:subPropertyOf focu:Grades.
+<COMP8901> a focu:Course ;
+	 focu:courseSubject "C" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Doctoral Research and Thesis " ;
+	 focu:courseDescription "COMP 8901 Doctoral Research and Thesis (70 credits)" ;
+	 rdfs:label "COMP8901"@en .
+focu:gradeCOMP8901 rdfs:subPropertyOf focu:Grades.
+<SOEN6011> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Engineering Processes " ;
+	 focu:courseDescription "SOEN 6011 Software Engineering Processes (4 credits)  Introduction to software engineering concepts, modern management processes and software lifecycles. Tracking of software requirements and development through issue trackers. Version control practices include integration of feature branching. Validation practices including testing frameworks and code review. Continuous integration and build environments. A practical component on setting up a development environment similar to those used in professional environments. Case studies of successful management processes from open source projects and industry. A project is required." ;
+	 rdfs:label "SOEN6011"@en .
+focu:gradeSOEN6011 rdfs:subPropertyOf focu:Grades.
+<SOEN6021> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Re-engineering " ;
+	 focu:courseDescription "SOEN 6021 Software Re-engineering (4 credits) Prerequisite: SOEN 6461 or permission of the instructor. This course introduces software re-engineering, software architecture recovery and reconstruction, and reflexion models. Students use development history to support reengineering, and are exposed to the latest empirical studies on software reengineering and software metrics applied to software re-engineering. Also, students learn how to apply various software re-engineering patterns and software migration strategies. A project is required. Note: Students who have received credit for SOEN 691 (Software Re-engineering) may not take this course for credit." ;
+	 rdfs:label "SOEN6021"@en .
+focu:gradeSOEN6021 rdfs:subPropertyOf focu:Grades.
+<SOEN6211> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Semantic Computing " ;
+	 focu:courseDescription "SOEN 6211 Semantic Computing (4 credits)  System analysis, architecture, and engineering for semantic software products. Text Mining systems and their architectures. Tagging and Tag Analysis. Recommender Systems and Collaborative Filtering. Crawling the Blogosphere and Opinion Mining. Applying Clustering, Machine Learning, Classification, and Regression. The Web of Data and Semantic Web Technologies: RDF, RDFS, SPARQL. Linked Open Data (LOD). Design and Re-Use of Semantic Web Vocabularies and Ontologies. Semantic Desktops and Semantic Web Information Systems. Semantic Application Development. Application case studies in biomedical research, software development, business intelligence, online gaming, e-commerce and e-science. Research paper seminar. Empirical evaluation methodologies for semantic systems. A project is required. Note: Students who have received credit for this topic under a SOEN 691B number may not take this course for credit." ;
+	 rdfs:label "SOEN6211"@en .
+focu:gradeSOEN6211 rdfs:subPropertyOf focu:Grades.
+<SOEN6311> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Formal Methods " ;
+	 focu:courseDescription "SOEN 6311 Formal Methods (4 credits)  Components of formal systems: formal methods; levels of formalism. Integrating formal methods into the existing software life-cycle process model for a given project. Attributes of a formal specification language. Formal notations based on extended finite-state machines; case studies involving the design of user interfaces, reactive systems, and concurrent systems. Software development using formal methods, including tools for: type checking; debugging; verifying checkable properties; validation of refinements; and code generation from refinements. A project is required." ;
+	 rdfs:label "SOEN6311"@en .
+focu:gradeSOEN6311 rdfs:subPropertyOf focu:Grades.
+<SOEN6431> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Comprehension and Maintenance " ;
+	 focu:courseDescription "SOEN 6431 Software Comprehension and Maintenance (4 credits)  The course addresses both technical and managerial views of software comprehension and software maintenance issues. Topics covered in this course include: cognitive models, software visualization, CASE tools, reverse engineering, static and dynamic source code analysis, software configuration management, and introduction to current research topics in software maintenance and program comprehension. A project is required. Note: Students who have received credit for COMP 6431 may not take this course for credit." ;
+	 rdfs:label "SOEN6431"@en .
+focu:gradeSOEN6431 rdfs:subPropertyOf focu:Grades.
+<SOEN6441> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Programming Practices " ;
+	 focu:courseDescription "SOEN 6441 Advanced Programming Practices (4 credits)  Problems of writing and managing code. Managing code complexity and quality through a programming process. Self-documenting code, and documentation generation. Software configuration management. Best practices for writing unit tests to control code quality. Advanced practices such as multi-threading concurrency, code reuse, and fault tolerance. A project is required. Laboratory: two hours per week." ;
+	 rdfs:label "SOEN6441"@en .
+focu:gradeSOEN6441 rdfs:subPropertyOf focu:Grades.
+<SOEN6461> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Design Methodologies " ;
+	 focu:courseDescription "SOEN 6461 Software Design Methodologies (4 credits)  Introduction to software design processes and their models. Representations of design/architecture. Software architectures and design plans. Design methods, object-oriented application frameworks, design patterns, design quality and assurance, coupling and cohesion measurements, design verification and documentation. A design project. Note: Students who have received credit for COMP 6471 before September 2011 may not take this course for credit." ;
+	 rdfs:label "SOEN6461"@en .
+focu:gradeSOEN6461 rdfs:subPropertyOf focu:Grades.
+<SOEN6471> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Advanced Software Architectures " ;
+	 focu:courseDescription "SOEN 6471 Advanced Software Architectures (4 credits)  Study of architectural view models, architectural styles and frameworks; Architectural case studies and extraction of concrete architecture; Architectural design patterns; Model Driven Architecture (MDA), Service Oriented Architecture (SOA). Domain specific architectures such as mobile and cloud computing. A project is required." ;
+	 rdfs:label "SOEN6471"@en .
+focu:gradeSOEN6471 rdfs:subPropertyOf focu:Grades.
+<SOEN6481> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Systems Requirements Specification " ;
+	 focu:courseDescription "SOEN 6481 Software Systems Requirements Specification (4 credits)  The requirements engineering (RE) process. Requirements engineering in different software lifecycle models. Problem analysis. Requirements elicitation. Requirements evaluation. Inconsistency management. Risk analysis. Requirements prioritization and negotiation. Requirements specification: natural language documentation, IEEE and ISO standards. Use cases. Agile processes and user stories. Introduction to formal specification: logics, formal languages. Requirements quality assurance. RE tools. Requirements evolution. Traceability. Domain modelling: UML, ontologies, domain-specific languages. Modelling behaviour. Acceptance criteria. Test cases. Cost models. A project is required. Note: Students who have received credit for COMP 6481 may not take this course for credit." ;
+	 rdfs:label "SOEN6481"@en .
+focu:gradeSOEN6481 rdfs:subPropertyOf focu:Grades.
+<SOEN6491> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Refactoring " ;
+	 focu:courseDescription "SOEN 6491 Software Refactoring (4 credits) Prerequisite: SOEN 6461.  Topics include an introduction to preventive maintenance, design problems, and refactorings; techniques for the detection of design problems and refactoring opportunities; management of preventive maintenance: visualization, prioritization, ranking, and evolution tracking of design problems; empirical studies on refactoring activities and practices; implementation of source code analysis techniques and refactorings. A project is required. Note: Students who have received credit for SOEN 691C (Software Refactoring) may not take this course for credit." ;
+	 rdfs:label "SOEN6491"@en .
+focu:gradeSOEN6491 rdfs:subPropertyOf focu:Grades.
+<SOEN6501> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Programming Competency Test " ;
+	 focu:courseDescription "SOEN 6501 Programming Competency Test (No credit value) See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) or Master of/Magisteriate in Engineering (Software Engineering) sections." ;
+	 rdfs:label "SOEN6501"@en .
+focu:gradeSOEN6501 rdfs:subPropertyOf focu:Grades.
+<SOEN6611> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Measurement " ;
+	 focu:courseDescription "SOEN 6611 Software Measurement (4 credits)  Role of measurement in Software Engineering, theoretical, technical and managerial views on software measurement. Representational theory of measurement. Theoretical validation of software measurement. Goal-driven measurement. Collecting and analyzing software engineering data. Software quality modelling and measuring. Testing and measurement. Reliability models. Functional size measurement methods. Effort estimation models and their usage in project management. Software measurement standards. Tool support. Case studies. A project is required." ;
+	 rdfs:label "SOEN6611"@en .
+focu:gradeSOEN6611 rdfs:subPropertyOf focu:Grades.
+<SOEN6751> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Human Computer Interface Design  " ;
+	 focu:courseDescription "SOEN 6751 Human Computer Interface Design (4 credits)  Introduction to human computer interaction. User-centered design process. User modelling. Task analysis. User interface design knowledge (principles, guidelines and patterns). User interface prototyping. User interface evaluation. A project is required. Laboratory: two hours per week. Note: Note: Students who have received credit for COMP 6751 before September 2011 may not take this course for credit." ;
+	 rdfs:label "SOEN6751"@en .
+focu:gradeSOEN6751 rdfs:subPropertyOf focu:Grades.
+<SOEN6761> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Multimedia Computing " ;
+	 focu:courseDescription "SOEN 6761 Multimedia Computing (4 credits)  This course covers the state-of-the-art technology for multimedia computing. The course topics will cover current media types, images, video, audio, graphics and 3D models in terms of algorithms and data structures for their capture, representation, creation, storage, archival, transmission, assembling, presentation and retrieval. This course will cover fundamental ideas in multimedia technology applicable to computer science and software engineering. A project is required." ;
+	 rdfs:label "SOEN6761"@en .
+focu:gradeSOEN6761 rdfs:subPropertyOf focu:Grades.
+<SOEN6841> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Project Management " ;
+	 focu:courseDescription "SOEN 6841 Software Project Management (4 credits)  Fundamental concepts of management activities, demonstrating how it can relate to software engineering and how the two can be mutually supportive throughout software development and maintenance. Overview of object-oriented development; software development processes; quality considerations; activity planning; risk management; monitoring and control; maintenance and evolution; issues of professional ethics and practice, and legal issues. A project is required." ;
+	 rdfs:label "SOEN6841"@en .
+focu:gradeSOEN6841 rdfs:subPropertyOf focu:Grades.
+<SOEN6861> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Services Computing: Foundations, Design and Implementations " ;
+	 focu:courseDescription "SOEN 6861 Services Computing: Foundations, Design and Implementations (4 credits)  System design with Service Oriented Architecture. Open standards for Web services. Development of SOAP (Service-Oriented Architecture and Programming) and RESTful (REpresentational State Transfer) services. Business process modelling and management. Service composition. Formal models for services. A project is required. Note: Students who have received credit for SOEN 691A (Services Computing: Foundations, Design and Implementations) may not take this course for credit." ;
+	 rdfs:label "SOEN6861"@en .
+focu:gradeSOEN6861 rdfs:subPropertyOf focu:Grades.
+<SOEN691> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Topics in Software Engineering  " ;
+	 focu:courseDescription "SOEN 691 Topics in Software Engineering (4 credits)  Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that the course content has changed. Changes in content will be indicated by the letter following the course number, e.g. SOEN 691A, SOEN 691B, etc." ;
+	 rdfs:label "SOEN691"@en .
+focu:gradeSOEN691 rdfs:subPropertyOf focu:Grades.
+<SOEN6951> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Engineering Case Study " ;
+	 focu:courseDescription "SOEN 6951 Software Engineering Case Study (4 credits)  Students will complete a case study of a software project. Whenever possible, the project should be conducted in an industrial environment with the cooperation of the student’s employer. Note: Students who have received credit for SOEN 6971 or COMP 6971 may not take this course for credit." ;
+	 rdfs:label "SOEN6951"@en .
+focu:gradeSOEN6951 rdfs:subPropertyOf focu:Grades.
+<SOEN6971> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Project and Report  " ;
+	 focu:courseDescription "SOEN 6971 Project and Report (4 credits) Prerequisite: Completion of 16 credits; a CGPA of 3.40 or greater; permission of the Department.  See Requirements for the Degree of Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week. Note: Students who have received credit for COMP 6971 or SOEN 6951 may not take this course for credit." ;
+	 rdfs:label "SOEN6971"@en .
+focu:gradeSOEN6971 rdfs:subPropertyOf focu:Grades.
+<SOEN7481> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Software Verification and Testing " ;
+	 focu:courseDescription "SOEN 7481 Software Verification and Testing (4 credits) Prerequisites: SOEN 6461, SOEN 6481.  Overview of current software engineering testing methods, techniques and standards for testing system implementations. Classical white-box testing; dataflow testing; classical black-box testing; integration testing; system testing. Testing measures; test plan. IEEE standard. Object-oriented testing. Test-driven development. Testing quality measures. Test reduction techniques. Techniques for test automation. Tools and techniques for formal verification of software system designs: model checking and theorem proving. A project is required. Note: Students who have received credit for COMP 7481 may not take this course for credit." ;
+	 rdfs:label "SOEN7481"@en .
+focu:gradeSOEN7481 rdfs:subPropertyOf focu:Grades.
+<SOEN7761> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Intelligent User Interfaces " ;
+	 focu:courseDescription "SOEN 7761 Intelligent User Interfaces (4 credits) Prerequisite: SOEN 6751.  Intelligent systems and intelligent interfaces. A brief introduction to knowledge representation and reasoning. Creation and adaptation of user models. Software agents at the user interface. Applications of these concepts in the development of intelligent user interfaces. Adaptive user interfaces. Selected advanced topics, such as natural language interfaces, speech based user interfaces, and mobile user interfaces. Laboratory: two hours per week. A project is required. Note: Students who have received credit for COMP 7761 before September 2011 may not take this course for credit." ;
+	 rdfs:label "SOEN7761"@en .
+focu:gradeSOEN7761 rdfs:subPropertyOf focu:Grades.
+<SOEN791> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Topics in Software Engineering II " ;
+	 focu:courseDescription "SOEN 791 Topics in Software Engineering II (4 credits)  Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that the course content has changed. Changes in content will be indicated by the letter following the course number, e.g. SOEN 791A, SOEN 791B, etc." ;
+	 rdfs:label "SOEN791"@en .
+focu:gradeSOEN791 rdfs:subPropertyOf focu:Grades.
+<SOEN7941> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Master’s Research and Thesis " ;
+	 focu:courseDescription "SOEN 7941 Master’s Research and Thesis (29 credits)  Students are required to submit a thesis prepared under the guidance of a faculty member appointed by the GCS Graduate Studies Committee. The thesis must represent the result of the student’s independent work undertaken after admission to the program. The thesis will be evaluated by a committee appointed by the GCS Graduate Studies Committee." ;
+	 rdfs:label "SOEN7941"@en .
+focu:gradeSOEN7941 rdfs:subPropertyOf focu:Grades.
+<SOEN8901> a focu:Course ;
+	 focu:courseSubject "S" ;
+	 focu:courseNumber "O" ;
+	 focu:courseName "Doctoral Research and Thesis " ;
+	 focu:courseDescription "SOEN 8901 Doctoral Research and Thesis (70 credits)" ;
+	 rdfs:label "SOEN8901"@en .
+focu:gradeSOEN8901 rdfs:subPropertyOf focu:Grades.
 <AHSC220> focu:hasTopics <http://dbpedia.org/resource/Biopsychosocial_model> .
 <AHSC225> focu:hasTopics <http://dbpedia.org/resource/Integral> ;
 	 focu:hasTopics <http://dbpedia.org/resource/Action_learning> .
@@ -33768,3 +34256,617 @@ focu:gradeUNSS201 rdfs:subPropertyOf focu:Grades.
 	 focu:hasTopics <http://dbpedia.org/resource/Active_learning> ;
 	 focu:hasTopics <http://dbpedia.org/resource/Memory> ;
 	 focu:hasTopics <http://dbpedia.org/resource/Failure> .
+<COMP6231> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Distributed_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Scalability> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Concurrent_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Fault_tolerance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Client–server_model> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Inter-process_communication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Communication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Remote_procedure_call> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Web_server> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Fault_tolerance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Concurrency_control> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Fault_tolerance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Distributed_computing> .
+<COMP6281> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Balthasar_Neumann> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parallel_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Message_passing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/MIMD> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Commodity_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parallel_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multi-core_processor> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Heterogeneous_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_memory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Weight_distribution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Message_passing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Scalability> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parallel_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parallel_computing> .
+<COMP6311> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Traditional_animation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graphics_pipeline> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Interpolation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Inverse_kinematics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Motion_control> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Free-form_deformation> .
+<COMP6321> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Machine_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Machine_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Polynomial_regression> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Overfitting> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Model_selection> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Logistic_regression> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Decision_tree_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Instance-based_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_neural_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Support_vector_machine> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computational_learning_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Deep_belief_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Unsupervised_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/K-means_clustering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Expectation–maximization_algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Principal_component_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Dimensionality_reduction> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Dynamical_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Hidden_Markov_model> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Reinforcement_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Machine_learning> .
+<COMP6331> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Game_engine> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Pathfinding> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Collision_detection> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mobile_game> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_computer_graphics> .
+<COMP6341> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_vision> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_vision> ;
+	 focu:hasTopics <http://dbpedia.org/resource/OpenCV> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_vision> .
+<COMP6351> focu:hasTopics <http://dbpedia.org/resource/Numerical_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computational_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ordinary_differential_equation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Finite_difference_method> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Numerical_stability> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ordinary_differential_equation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Collocation_method> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Partial_differential_equation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Diffusion_equation> .
+<COMP6361> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Numerical_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Numerical_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_simulation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Homotopy> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Lyapunov_stability> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Wave> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Discretization> .
+<COMP6381> focu:hasTopics <http://dbpedia.org/resource/Digital_geometry> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graphics_pipeline> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Digital_electronics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Geometry> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Fender_Wide_Range> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer-aided_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Reverse_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Geometry> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Triangle_mesh> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Geometry> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Flat_spline> .
+<COMP6411> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Type_system> .
+<COMP6421> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Lexical_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parsing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Syntax-directed_translation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Program_optimization> .
+<COMP6461> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Error_detection_and_correction> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Control_flow> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Packet_switching> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Internet_Protocol> ;
+	 focu:hasTopics <http://dbpedia.org/resource/IPv6> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multicast> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_Datagram_Protocol> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Transmission_Control_Protocol> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Network_security> .
+<COMP6521> focu:hasTopics <http://dbpedia.org/resource/Query_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Query_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Information_integration> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_warehouse> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_mining> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Online_analytical_processing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/XML> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multimedia> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_management> .
+<COMP6531> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/World_Wide_Web_Consortium> ;
+	 focu:hasTopics <http://dbpedia.org/resource/XML> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Resource_Description_Framework> ;
+	 focu:hasTopics <http://dbpedia.org/resource/XML_schema> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ontology_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ontology> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Web_Ontology_Language> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ontology> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ontology> .
+<COMP6591> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/First-order_logic> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Relational_algebra> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Relational_calculus> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Logic_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> .
+<COMP6621> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Discrete_mathematics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Paul_Erdős> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Paul_Erdős> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ramsey_Abbey> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Theorem> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ramsey_Abbey> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Van> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Theorem> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Van> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Conjecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Theorem> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Extremal_graph_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Random_graph> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graph_coloring> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Probabilistic_method> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> .
+<COMP6631> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mathematical_model> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mathematical_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mathematical_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Lagrangian_relaxation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mathematical_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Integer> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Nonlinear_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Continuous_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Branch_and_bound> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Direct_current> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Convex_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bilinear_form> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Biconvex_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Heuristic> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<COMP6641> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/General_officer> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Turing_machine> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Turing_machine> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computable_function> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computable_function> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Theorem> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Time> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computational_complexity_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computational_complexity_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computational_complexity_theory> .
+<COMP6651> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Combinatorial_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Dynamic_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Branch_and_bound> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graph_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Analysis_of_algorithms> ;
+	 focu:hasTopics <http://dbpedia.org/resource/String_searching_algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/NP-completeness> .
+<COMP6661> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Combinatorics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Combinatorics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graph_theory> .
+<COMP6711> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Polygon_triangulation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Point_location> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Range_searching> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Voronoi_diagram> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Robert_Delaunay> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Polygon_triangulation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Robotics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Motion_planning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Binary_number> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Sweep_line_algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer-aided_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mesh_generation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Robotics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Motion_planning> .
+<COMP6721> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Applied_Artificial_Intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Heuristic> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Automated_reasoning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Recurrent_neural_network> .
+<COMP6731> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Pattern_recognition> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Feature_extraction> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bayes_estimator> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Discriminant> .
+<COMP6741> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Conflict_resolution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Blackboard> .
+<COMP6751> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Natural-language_processing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/English_language> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parsing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Principle_of_compositionality> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Text_mining> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<COMP6761> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Applications_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Graphics_pipeline> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Hidden_surface_determination> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Collision_detection> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Photorealism> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Game_physics> .
+<COMP6771> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Digital_image_processing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Histogram> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Frequency_domain> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Image_segmentation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Hough_transform> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Edge_detection> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Thresholding_(image_processing)> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Image_compression> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Wavelet_transform> .
+<COMP6781> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Stochastic_grammar> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Natural-language_processing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Statistical_machine_translation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/N-gram> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Word-sense_disambiguation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Part-of-speech_tagging> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Parsing> .
+<COMP6791> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Information_retrieval> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Boolean_algebra> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Vector_space> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Lexical_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Weighting> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Relevance_feedback> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Query_expansion> ;
+	 focu:hasTopics <http://dbpedia.org/resource/XML> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Link_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/PageRank> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Anti-spam_techniques> .
+<COMP6811> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bioinformatics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bioinformatics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multiple_sequence_alignment> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multiple_sequence_alignment> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Phylogenetic_tree> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Protein_structure_prediction> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Three-dimensional_space> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Gene> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Gene_expression> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Dynamic_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Machine_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Simulated_annealing> .
+<COMP6821> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bioinformatics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bioinformatics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Knowledge_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Database> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Database> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bioinformatics> .
+<COMP691> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<COMP6961> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Failure> .
+<COMP6971> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<COMP7241> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_memory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Analysis_of_algorithms> .
+<COMP7251> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Mobile_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Wireless_LAN> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Personal_area_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Metropolitan_area_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Wireless_sensor_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Network_topology> .
+<COMP7451> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Model_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Logic> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Temporal_logic> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Distributed_computing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantics> .
+<COMP7521> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cryptography> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cryptography> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Information_theory> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Symmetric-key_algorithm> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cryptography> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Advanced_Encryption_Standard> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Advanced_Encryption_Standard> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cryptographic_hash_function> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Authentication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_integrity> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Authentication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Key_distribution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Confidentiality> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Authentication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Access_control> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Non-repudiation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Public-key_cryptography> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Digital_data> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Challenge–response_authentication> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cryptography> .
+<COMP7531> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Deductive_database> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Query_optimization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Incomplete_(Backstreet_Boys_song)> .
+<COMP7651> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Amortized_analysis> .
+<COMP7661> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_graphics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Movie_theater> .
+<COMP7751> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Pattern_recognition> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Pattern_recognition> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Data_acquisition> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Feature_extraction> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Principal_component_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Expert_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Artificial_neural_network> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Pattern_recognition> .
+<COMP7781> focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Digital_image_processing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Shape> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Wavelet> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multiresolution_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Partial_differential_equation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Calculus_of_variations> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Diffusion_equation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Markov_random_field> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Bayesian_inference> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Energy> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Level-set_method> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Inpainting> .
+<COMP791> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<COMP7941> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<COMP8901> focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<SOEN6011> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Version_control> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_review> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Continuous_integration> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Open-source_model> .
+<SOEN6021> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_architecture_recovery> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_refactoring> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_refactoring> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_metric> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_modernization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN6211> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/System_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Text_mining> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Collaborative_filtering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Blogosphere> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Machine_learning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/World_Wide_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Resource_Description_Framework> ;
+	 focu:hasTopics <http://dbpedia.org/resource/RDF_Schema> ;
+	 focu:hasTopics <http://dbpedia.org/resource/SPARQL> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Linked_data> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Linked_data> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ontology> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Business_intelligence> ;
+	 focu:hasTopics <http://dbpedia.org/resource/E-commerce> ;
+	 focu:hasTopics <http://dbpedia.org/resource/E-Science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Semantic_Web> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN6311> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_methods> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_methods> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_methods> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_release_life_cycle> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development_process> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_specification> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Finite-state_machine> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_methods> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Type_system> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Debugging> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Automatic_programming> .
+<SOEN6431> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_maintenance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cognition> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_visualization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer-aided_software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Reverse_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Static_program_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_configuration_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_maintenance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Program_comprehension> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+<SOEN6441> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Self-documenting_code> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_configuration_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Unit_testing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Thread_(computing)> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_reuse> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Fault_tolerance> .
+<SOEN6461> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Design_methods> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Object-oriented_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_design_pattern> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<SOEN6471> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_design_pattern> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Model-driven_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Service-oriented_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Service-oriented_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cloud_computing> .
+<SOEN6481> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Requirements_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Requirements_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development_process> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Requirements_elicitation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Risk_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Language_documentation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers> ;
+	 focu:hasTopics <http://dbpedia.org/resource/International_Organization_for_Standardization> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Agile_software_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_story> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_specification> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_language> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Quality_assurance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Evolution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Unified_Modeling_Language> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Upper_ontology> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Domain-specific_language> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test_cricket> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<SOEN6491> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_refactoring> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Preventive_maintenance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Preventive_maintenance> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Evolution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Static_program_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Code_refactoring> .
+<SOEN6501> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test_cricket> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> .
+<SOEN6611> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_measurement> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_measurement> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_measurement> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Project_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_measurement> .
+<SOEN6751> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Human_computer> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User-centered_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Task_analysis> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_interface_design> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<SOEN6761> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multimedia> ;
+	 focu:hasTopics <http://dbpedia.org/resource/3D_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Multimedia> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> .
+<SOEN6841> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Object-oriented_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Risk_management> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Evolution> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Ethics> .
+<SOEN6861> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Service-oriented_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Web_service> ;
+	 focu:hasTopics <http://dbpedia.org/resource/SOAP> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Service-oriented_architecture> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Representational_state_transfer> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Process_modeling> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN691> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN6951> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<SOEN6971> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Computer_science> ;
+	 focu:hasTopics <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN7481> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/White-box_testing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Dataflow_programming> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Classical_mechanics> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Black-box_testing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Integration_testing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/System_testing> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test_plan> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test-driven_development> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test_cricket> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Test_automation> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Formal_verification> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Model_checking> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Automated_theorem_proving> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein> .
+<SOEN7761> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Intelligent_user_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> ;
+	 focu:hasTopics <http://dbpedia.org/resource/User_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Intelligent_user_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Adaptive_user_interface> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Natural-language_user_interface> .
+<SOEN791> focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Software_engineering> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> ;
+	 focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN7941> focu:hasTopics <http://dbpedia.org/resource/Soen> .
+<SOEN8901> focu:hasTopics <http://dbpedia.org/resource/Soen> .
