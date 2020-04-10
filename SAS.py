@@ -1,5 +1,6 @@
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 from rdflib.namespace import DC, FOAF
+import re
 
 
 
@@ -169,6 +170,12 @@ if __name__ == "__main__":
 
     g.load("triples.rdf", format='turtle')
 
+    patternCourseDescription = re.compile(r"What is [a-zA-Z0-9 ]* about\?$", re.IGNORECASE)
+    patternStudentCourses = re.compile(r"Which courses did [a-zA-Z]* take\?$", re.IGNORECASE)
+    patternCourseTopics = re.compile(r"Which courses cover [a-zA-Z0-9 ]*\?$", re.IGNORECASE)
+    patternFamiliarWith = re.compile(r"Who is familiar with [a-zA-Z0-9 ]*\?$", re.IGNORECASE)
+
+
     actif = True
     while(actif):
         if(inputText == "stop"):
@@ -176,42 +183,63 @@ if __name__ == "__main__":
             actif = False
 
         else:
-            if(inputText == "triples"): #1
+            if(inputText == "How many triples are there?"): #1
                 get_total_number_of_triples()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "students"): #2
+            elif(inputText == "How many students are there?"): #2
                 get_number_of_students()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "courses"): #2
+            elif(inputText == "How many courses are there?"): #2
                 get_number_of_courses()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "topics"): #2
+            elif(inputText == "How many topics are there"): #2
                 get_number_of_topics()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "course topics"): #3
+            elif(inputText == "Find course topics"): #3
                 inputText = input("What course do you want the topics for ?\n")
                 print("These are all topics covered:")
                 topics = get_topics_of_course(inputText)
                 print_course_topics(topics)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "courses passed"): #4
+            elif(inputText == "Find courses passed"): #4
                 inputText = input("For which student do you want to know the classes that he/she passed ?\n")
                 get_courses_passed_by_student(inputText)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "familiar with"):#5
+            elif(inputText == "Find topics familiar with"):#5
                 inputText = input("For what topic do you want to know the students who are familiar with it?\n")
                 get_student_familiar_with_topic(inputText)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "student topics"):#6
+            elif(inputText == "Find student familiar with topics"):#6
                 inputText = input("For what students do you want to know the topics they are familiar with?\n")
                 get_topics_student_famliar_with(inputText)
+                inputText = input("Anything else ?\n")
+
+            elif(re.match(patternCourseDescription,inputText)):
+                #divide by space and concatinate third and 4th word
+                course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
+                course = course.upper()
+                inputText = input("Anything else ?\n")
+
+            elif(re.match(patternStudentCourses,inputText)):
+                student = re.split('\s+', inputText)[3].lower().capitalize()
+                print(student)
+                inputText = input("Anything else ?\n")
+
+            elif(re.match(patternCourseTopics,inputText)):
+                topic = inputText[20:len(inputText)-1]
+                print(topic.lower().capitalize())
+                inputText = input("Anything else ?\n")
+
+            elif(re.match(patternFamiliarWith,inputText)):
+                topic = inputText[21:len(inputText)-1]
+                print(topic.lower().capitalize())
                 inputText = input("Anything else ?\n")
 
             elif(inputText == "stop"):
