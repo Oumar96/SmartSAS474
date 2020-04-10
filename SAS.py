@@ -165,6 +165,41 @@ def get_student_familiar_with_topic(topic):
     else:
         print("No student is familiar with this topic")
 
+def get_course_description(course):
+    subject = "<http://example.org/"+course+">"
+
+    query = """SELECT ?description
+                WHERE {{
+                    {} focu:courseDescription ?description.
+                }}""".format(subject)
+
+    qres = g.query(query)
+    if(len(qres) > 0):
+        for row in qres:
+            print("Here is the description of {}:".format(course))
+            print(row[0])
+    else:
+        print("{} is not a course".format(course))
+
+def get_courses_student_took(student):
+    subject = "<http://example.org/"+student+"#me>"
+
+    query = """SELECT ?description
+                WHERE {{
+                    {} focu:Grades ?description.
+                }}""".format(subject)
+
+    qres = g.query(query)
+
+    if(len(qres) > 0):
+        for row in qres:
+            grade = re.split('\s+', row[0])[0]
+            course = re.split('\s+', row[0])[1]
+            print("{} took {} and got {} as a grade".format(student, course, grade))
+            get_course_description(course)
+    else:
+        print("{} is not a student in our University".format(subject))
+
 def get_courses_that_cover_topic(topic):
     topic_formated = topic.replace(" ","_")
     link = "<http://dbpedia.org/resource/"+topic_formated+">"
@@ -244,12 +279,13 @@ if __name__ == "__main__":
             elif(re.match(patternCourseDescription,inputText)): #A2 - 1 “What is the <course> about?”
                 #divide by space and concatinate third and 4th word
                 course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
-                course = course.upper()
+                course = course[0].upper()+course[1:]
+                get_course_description(course)
                 inputText = input("Anything else ?\n")
 
             elif(re.match(patternStudentCourses,inputText)): #A2 - 2 “Which courses did <Student> take?”
                 student = re.split('\s+', inputText)[3].lower().capitalize()
-                print(student)
+                get_courses_student_took(student)
                 inputText = input("Anything else ?\n")
 
             elif(re.match(patternCourseTopics,inputText)): #A2 - 3 “Which courses cover <Topic>?”
@@ -261,7 +297,7 @@ if __name__ == "__main__":
             elif(re.match(patternFamiliarWith,inputText)): #A2 - 4 “Who is familiar with <Topic>?”
                 topic = inputText[21:len(inputText)-1].lower()
                 topic = topic[0].upper()+topic[1:]
-                get_student_familiar_with_topic(topic) 
+                get_student_familiar_with_topic(topic)
                 inputText = input("Anything else ?\n")
 
             elif(inputText == "stop"):
