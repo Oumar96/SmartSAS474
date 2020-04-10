@@ -151,16 +151,36 @@ def get_student_familiar_with_topic(topic):
                     all_familiar_with.append(student)
 
     all_familiar_with = list(dict.fromkeys(all_familiar_with))
-    for familiar_with in all_familiar_with:
-        formated_familiar_with = "<{}>".format(familiar_with)
-        query3 = """PREFIX rdfs:<https://www.w3.org/2000/01/rdf-schema#>
-                SELECT ?object
+    if(len(all_familiar_with)>0):
+        for familiar_with in all_familiar_with:
+            formated_familiar_with = "<{}>".format(familiar_with)
+            query3 = """PREFIX rdfs:<https://www.w3.org/2000/01/rdf-schema#>
+                    SELECT ?object
+                    WHERE {{
+                        {} rdfs:label ?object.
+                    }}""".format(formated_familiar_with)
+            qfamiliarres = g.query(query3)
+            for res in qfamiliarres:
+                print(res[0], "is familiar with the topic")
+    else:
+        print("No student is familiar with this topic")
+
+def get_courses_that_cover_topic(topic):
+    topic_formated = topic.replace(" ","_")
+    link = "<http://dbpedia.org/resource/"+topic_formated+">"
+
+    query = """SELECT ?course
                 WHERE {{
-                    {} rdfs:label ?object.
-                }}""".format(formated_familiar_with)
-        qfamiliarres = g.query(query3)
-        for res in qfamiliarres:
-            print(res[0], "is familiar with the topic")
+                    ?course focu:hasTopics {}.
+                }}""".format(link)
+
+    qres = g.query(query)
+
+    if(len(qres) >0):
+        for row in qres:
+            print(row[0].replace("http://example.org/",""))
+    else:
+        print("No course covers this topic")
 
 
 if __name__ == "__main__":
@@ -221,25 +241,27 @@ if __name__ == "__main__":
                 get_topics_student_famliar_with(inputText)
                 inputText = input("Anything else ?\n")
 
-            elif(re.match(patternCourseDescription,inputText)):
+            elif(re.match(patternCourseDescription,inputText)): #A2 - 1 “What is the <course> about?”
                 #divide by space and concatinate third and 4th word
                 course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
                 course = course.upper()
                 inputText = input("Anything else ?\n")
 
-            elif(re.match(patternStudentCourses,inputText)):
+            elif(re.match(patternStudentCourses,inputText)): #A2 - 2 “Which courses did <Student> take?”
                 student = re.split('\s+', inputText)[3].lower().capitalize()
                 print(student)
                 inputText = input("Anything else ?\n")
 
-            elif(re.match(patternCourseTopics,inputText)):
-                topic = inputText[20:len(inputText)-1]
-                print(topic.lower().capitalize())
+            elif(re.match(patternCourseTopics,inputText)): #A2 - 3 “Which courses cover <Topic>?”
+                topic = inputText[20:len(inputText)-1].lower()
+                topic = topic[0].upper()+topic[1:]
+                get_courses_that_cover_topic(topic)
                 inputText = input("Anything else ?\n")
 
-            elif(re.match(patternFamiliarWith,inputText)):
-                topic = inputText[21:len(inputText)-1]
-                print(topic.lower().capitalize())
+            elif(re.match(patternFamiliarWith,inputText)): #A2 - 4 “Who is familiar with <Topic>?”
+                topic = inputText[21:len(inputText)-1].lower()
+                topic = topic[0].upper()+topic[1:]
+                get_student_familiar_with_topic(topic) 
                 inputText = input("Anything else ?\n")
 
             elif(inputText == "stop"):
