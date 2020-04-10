@@ -238,6 +238,8 @@ if __name__ == "__main__":
             actif = False
 
         else:
+
+# ========================================Assignement 1 =========================
             if(inputText == "How many triples are there?"): #1
                 get_total_number_of_triples()
                 inputText = input("Anything else ?\n")
@@ -276,6 +278,7 @@ if __name__ == "__main__":
                 get_topics_student_famliar_with(inputText)
                 inputText = input("Anything else ?\n")
 
+#====================================Assignment2===============================
             elif(re.match(patternCourseDescription,inputText)): #A2 - 1 “What is the <course> about?”
                 #divide by space and concatinate third and 4th word
                 course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
