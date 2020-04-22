@@ -279,10 +279,15 @@ if __name__ == "__main__":
                 inputText = input("Anything else ?\n")
 
 #====================================Assignment2===============================
-            elif(re.match(patternCourseDescription,inputText)): #A2 - 1 “What is the <course> about?”
+            elif(re.match(patternCourseDescription,inputText)): #A2 - 1 “What is <course> about?”
                 #divide by space and concatinate third and 4th word
-                course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
-                course = course[0].upper()+course[1:]
+                course=''
+                if(len(re.split('\s+', inputText)) == 5):
+                    course = re.split('\s+', inputText)[2]+re.split('\s+', inputText)[3]
+                    course = course.upper()
+                elif(len(re.split('\s+', inputText)) == 4):
+                    course = re.split('\s+', inputText)[2]
+                    course = course.upper()
                 get_course_description(course)
                 inputText = input("Anything else ?\n")
 
