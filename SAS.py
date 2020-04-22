@@ -217,6 +217,10 @@ def get_courses_that_cover_topic(topic):
     else:
         print("No course covers this topic")
 
+def endsWithQuestionMark(question):
+    if(question[len(question)-1] != '?'):
+        question=question+'?'
+    return question
 
 if __name__ == "__main__":
     g = Graph()
@@ -230,7 +234,6 @@ if __name__ == "__main__":
     patternCourseTopics = re.compile(r"Which courses cover [a-zA-Z0-9 ]*\?$", re.IGNORECASE)
     patternFamiliarWith = re.compile(r"Who is familiar with [a-zA-Z0-9 ]*\?$", re.IGNORECASE)
 
-
     actif = True
     while(actif):
         if(inputText == "stop"):
@@ -238,6 +241,7 @@ if __name__ == "__main__":
             actif = False
 
         else:
+            inputText=endsWithQuestionMark(inputText)
 
 # ========================================Assignement 1 =========================
             if(inputText == "How many triples are there?"): #1
