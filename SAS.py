@@ -256,28 +256,28 @@ if __name__ == "__main__":
                 get_number_of_courses()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "How many topics are there"): #2
+            elif(inputText == "How many topics are there?"): #2
                 get_number_of_topics()
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "Find course topics"): #3
+            elif(inputText == "Find course topics?"): #3
                 inputText = input("What course do you want the topics for ?\n")
                 print("These are all topics covered:")
                 topics = get_topics_of_course(inputText)
                 print_course_topics(topics)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "Find courses passed"): #4
+            elif(inputText == "Find courses passed?"): #4
                 inputText = input("For which student do you want to know the classes that he/she passed ?\n")
                 get_courses_passed_by_student(inputText)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "Find topics familiar with"):#5
+            elif(inputText == "Find topics familiar with?"):#5
                 inputText = input("For what topic do you want to know the students who are familiar with it?\n")
                 get_student_familiar_with_topic(inputText)
                 inputText = input("Anything else ?\n")
 
-            elif(inputText == "Find student familiar with topics"):#6
+            elif(inputText == "Find student familiar with topics?"):#6
                 inputText = input("For what students do you want to know the topics they are familiar with?\n")
                 get_topics_student_famliar_with(inputText)
                 inputText = input("Anything else ?\n")
